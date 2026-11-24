@@ -79,7 +79,7 @@ class OrdersService
     }
 
     /**
-     * Create an order on NexoPOS.
+     * Create an order on MyPosLab.
      *
      * @param  array      $fields
      * @param  Order|null $order  (optional)

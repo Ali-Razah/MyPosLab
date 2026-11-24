@@ -1,0 +1,21 @@
+MyPosLab
+========
+
+MyPosLab is a modified version of NexoPOS.
+
+  Original project : NexoPOS
+  Original author  : Blair2004 (https://github.com/Blair2004) and contributors
+  Source           : https://github.com/Blair2004/NexoPOS
+  Based on commit  : 053cea2 (imported 2026-11-24)
+  License          : GNU General Public License v3.0 (see LICENSE)
+
+Modifications in MyPosLab include rebranding (name, logo, icons and
+user-facing text) and further user-interface changes. Internal identifiers
+such as database table names (nexopos_*), permission names (nexopos.*),
+API routes (api/nexopos/v4) and the config file (config/nexopos.php) are kept
+unchanged so that existing databases and modules remain compatible.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details.

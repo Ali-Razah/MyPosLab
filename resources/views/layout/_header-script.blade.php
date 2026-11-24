@@ -14,7 +14,7 @@ $dateService    =   app()->make( DateService::class );
         window.nsExtraComponents     =   new Object;
 
         /**
-         * describe a global NexoPOS object
+         * describe a global MyPosLab object
          * @param {object} ns
          */
         window.ns   =   { nsExtraComponents };

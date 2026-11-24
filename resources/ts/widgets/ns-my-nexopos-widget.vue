@@ -30,7 +30,7 @@
                     <span class="text-xs font-semibold uppercase tracking-wider">{{ __( 'Connected features' ) }}</span>
                 </div>
                 <h3 class="text-lg font-bold leading-6 text-fontcolor-hard">
-                    {{ __( 'Connect NexoPOS to a larger toolbox.' ) }}
+                    {{ __( 'Connect MyPosLab to a larger toolbox.' ) }}
                 </h3>
                 <p class="mt-2 text-sm leading-6 text-fontcolor-soft">
                     {{ __( 'Link this installation to my.nexopos.com to discover modules, install extensions faster, and keep your store ready for what comes next.' ) }}

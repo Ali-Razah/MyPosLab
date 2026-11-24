@@ -43,7 +43,7 @@ class ModuleEnableCommand extends Command
     {
         try {
             if ( ! Helper::installed() ) {
-                return $this->error( __( 'NexoPOS is not installed, unable to proceed.' ) );
+                return $this->error( __( 'MyPosLab is not installed, unable to proceed.' ) );
             }
 
             $result = $this->modulesService->enable( $this->argument( 'identifier' ) );

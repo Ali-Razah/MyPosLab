@@ -14,7 +14,7 @@ class NsLanguage {
         const promises  =   [];
 
         /**
-         * the language for NexoPOS is
+         * the language for MyPosLab is
          * fetched in priority
          */
         promises.push( this.fetchLang( 'NexoPOS', ns.langFiles ) );

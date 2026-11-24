@@ -47,7 +47,10 @@ if ( Auth::check() ) {
                             @if ( ns()->option->get( 'ns_store_rectangle_logo' ) )
                             <img src="{{ ns()->option->get( 'ns_store_rectangle_logo' ) }}" class="w-11/12" alt="logo"/>
                             @else
-                            <h1 class="font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-200 to-indigo-400 text-3xl">NexoPOS</h1>
+                            <a href="{{ ns()->route( 'ns.dashboard.home' ) }}" class="flex items-center gap-2" aria-label="MyPosLab">
+                                <img src="{{ asset( 'svg/myposlab-icon.svg' ) }}" class="w-9 h-9" alt=""/>
+                                <span class="text-2xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-indigo-300"><span class="font-black">MyPos</span><span class="font-normal">Lab</span></span>
+                            </a>
                             @endif
                         </div>
                         <ul id="aside-menu" class="mr-2">
@@ -93,13 +96,11 @@ if ( Auth::check() ) {
                     @endif
                 </div>
                 <div class="p-2 text-xs flex justify-end text-gray-500">
-                    @if( $latestVersion = ns()->option->get( 'ns_latest_version' ) )
-                    <a href="https://my.nexopos.com/redirect/latest" target="_blank" class="hover:text-blue-400 ml-2 inline-block">
-                        {{ sprintf( __( 'Download NexoPOS %s' ), $latestVersion ) }}
-                    </a>
-                    @else
-                    {!! Hook::filter( 'ns-footer-signature', sprintf( __( 'You\'re using <a tager="_blank" href="%s" class="hover:text-blue-400 mx-1 inline-block">NexoPOS %s</a>' ), 'https://my.nexopos.com/en', config( 'nexopos.version' ) ) ) !!}
-                    @endif
+                    {!! Hook::filter( 'ns-footer-signature', sprintf(
+                        __( 'MyPosLab %s &middot; built on %s (GPL-3.0)' ),
+                        e( config( 'nexopos.version' ) ),
+                        '<a target="_blank" rel="noopener" href="https://github.com/Blair2004/NexoPOS" class="hover:text-blue-400">NexoPOS</a>'
+                    ) ) !!}
                 </div>
             </div>
             @endif

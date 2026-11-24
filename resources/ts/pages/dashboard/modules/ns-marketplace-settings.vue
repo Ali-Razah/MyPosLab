@@ -110,7 +110,7 @@ export default {
         disconnect() {
             Popup.show( nsConfirmPopup, {
                 title: __( 'Confirm your action' ),
-                message: __( 'Disconnect this NexoPOS installation from My NexoPOS? You will need to connect again before accessing licenses, downloads, or your marketplace cart.' ),
+                message: __( 'Disconnect this MyPosLab installation from My NexoPOS? You will need to connect again before accessing licenses, downloads, or your marketplace cart.' ),
                 onAction: ( action ) => {
                     if ( action ) {
                         this.isDisconnecting = true;
