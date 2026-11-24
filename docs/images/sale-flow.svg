@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 594" role="img" aria-label="What happens when a sale is completed in MyPosLab">
+  <title>What happens when a sale is completed in MyPosLab</title>
+  <defs>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06B6D4"/><stop offset="1" stop-color="#4F46E5"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#818CF8"/></marker>
+    <style>
+      .box{fill:#111827;stroke:#334155;stroke-width:1.5}
+      .t{font-family:Inter,'Segoe UI',Roboto,Arial,sans-serif;fill:#F1F5F9;font-size:19px;font-weight:700}
+      .s{font-family:Inter,'Segoe UI',Roboto,Arial,sans-serif;fill:#94A3B8;font-size:15px}
+      .l{stroke:#818CF8;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="594" rx="20" fill="#0B1220"/>
+  <text x="40" y="52" class="t" style="font-size:24px">One sale, six automatic follow-ups</text>
+  <text x="40" y="80" class="s">Each module listens to the same order events, so the cashier only presses “Pay”.</text>
+  <rect x="40" y="251.0" width="270" height="150" rx="16" fill="url(#core)"/>
+  <text x="175" y="311.0" text-anchor="middle" class="t" style="font-size:23px">Cashier sells</text>
+  <text x="175" y="340.0" text-anchor="middle" class="s" style="fill:#E0E7FF">POS · barcode · payment</text>
+  <text x="175" y="364.0" text-anchor="middle" class="s" style="fill:#E0E7FF">order saved in MyPosLab</text>
+  <path class="l" d="M310 326.0 C 380 326.0, 360 141.0, 428 141.0"/>
+  <rect class="box" x="430" y="110" width="730" height="62" rx="14"/>
+  <text x="452" y="137" class="t">🧾 UAE e-invoice</text><text x="452" y="160" class="s">Numbered tax invoice + PINT-AE XML, ready for your Accredited Service Provider</text>
+  <path class="l" d="M310 326.0 C 380 326.0, 360 215.0, 428 215.0"/>
+  <rect class="box" x="430" y="184" width="730" height="62" rx="14"/>
+  <text x="452" y="211" class="t">📦 Batch &amp; expiry</text><text x="452" y="234" class="s">Stock is taken from the batch that expires first (FEFO), traceable for recalls</text>
+  <path class="l" d="M310 326.0 C 380 326.0, 360 289.0, 428 289.0"/>
+  <rect class="box" x="430" y="258" width="730" height="62" rx="14"/>
+  <text x="452" y="285" class="t">🏬 Branch tag</text><text x="452" y="308" class="s">The sale is counted for its branch in the branch performance report</text>
+  <path class="l" d="M310 326.0 C 380 326.0, 360 363.0, 428 363.0"/>
+  <rect class="box" x="430" y="332" width="730" height="62" rx="14"/>
+  <text x="452" y="359" class="t">💬 WhatsApp receipt</text><text x="452" y="382" class="s">A secure, expiring receipt link is sent to the customer's phone</text>
+  <path class="l" d="M310 326.0 C 380 326.0, 360 437.0, 428 437.0"/>
+  <rect class="box" x="430" y="406" width="730" height="62" rx="14"/>
+  <text x="452" y="433" class="t">🖥️ Customer display</text><text x="452" y="456" class="s">Second screen shows the total, change due and a thank-you message</text>
+  <path class="l" d="M310 326.0 C 380 326.0, 360 511.0, 428 511.0"/>
+  <rect class="box" x="430" y="480" width="730" height="62" rx="14"/>
+  <text x="452" y="507" class="t">📱 Owner app</text><text x="452" y="530" class="s">Sales, profit and low stock update on the owner's phone</text>
+  <text x="1160" y="580" text-anchor="end" class="s" style="font-size:13px">If any follow-up fails it is logged and the sale still completes.</text>
+</svg>
