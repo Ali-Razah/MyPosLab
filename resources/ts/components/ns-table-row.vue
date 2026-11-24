@@ -26,7 +26,7 @@
                 </div>
             </div>
         </td>
-        <td :key="identifier" v-for="(column, identifier) of columns" class="font-sans p-1">
+        <td :key="identifier" v-for="(column, identifier) of columns" :data-column="identifier" class="font-sans p-1">
             <template v-if="row[ identifier ] && row[ identifier ].type && row[ identifier ].type === 'link'">
                 <a target="_blank" :href="row[ identifier ].href" v-html="sanitizeHTML( row[ identifier ].label )"></a>
             </template>

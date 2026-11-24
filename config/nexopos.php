@@ -94,8 +94,8 @@ return [
      * --------------------------------------------------------------------
      */
     'themes' => [
+        'light' => 'Light (MyPosLab)',
         'dark' => 'Dark',
-        'light' => 'Light',
         'phosphor' => 'Phosphor',
     ],
 

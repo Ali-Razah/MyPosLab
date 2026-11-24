@@ -39,35 +39,35 @@
         td {
             @apply border-table-th-edge;
             &.info {
-                @apply border-info-secondary bg-info-primary text-white;
+                @apply border-table-th-edge bg-info-primary text-fontcolor;
             }
             &.error {
-                @apply border-error-secondary bg-error-primary text-white;
+                @apply border-table-th-edge bg-error-primary text-fontcolor;
             }
             &.success {
-                @apply border-success-secondary bg-success-primary/70 text-white;
+                @apply border-table-th-edge bg-success-primary text-fontcolor;
             }
             &.warning {
-                @apply border-warning-secondary bg-warning-primary text-white;
+                @apply border-table-th-edge bg-warning-primary text-fontcolor;
             }
         }
 
         tr {
             @apply border-table-th-edge;
             &.info {
-                @apply bg-info-primary text-white;
+                @apply bg-info-primary/45 text-fontcolor;
             }
         
             &.error {
-                @apply bg-error-primary text-white;
+                @apply bg-error-primary/45 text-fontcolor;
             }
         
             &.success {
-                @apply bg-success-primary text-white;
+                @apply bg-transparent text-fontcolor;
             }
         
             &.warning {
-                @apply bg-warning-primary text-white;
+                @apply bg-warning-primary/45 text-fontcolor;
             }
         }
         .ns-inset-button {
@@ -83,18 +83,18 @@
     }
 
     tr.info {
-        @apply bg-info-secondary text-white;
+        @apply bg-info-primary/45 text-fontcolor;
     }
 
     tr.error {
-        @apply bg-error-secondary text-white;
+        @apply bg-error-primary/45 text-fontcolor;
     }
 
     tr.success {
-        @apply bg-success-secondary text-white;
+        @apply bg-transparent text-fontcolor;
     }
 
     tr.warning {
-        @apply bg-warning-secondary text-white;
+        @apply bg-warning-primary/45 text-fontcolor;
     }
 }

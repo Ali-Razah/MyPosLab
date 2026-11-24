@@ -16,7 +16,7 @@
 .input-group {
     @apply border-input-edge;
     input, select {
-        @apply bg-crud-button-edge text-fontcolor;
+        @apply bg-input-background text-fontcolor;
     }
     button {
         @apply bg-input-disabled text-white outline-hidden;
@@ -107,7 +107,7 @@
         option {
             @apply bg-input-background;
             &:hover {
-                @apply bg-input-option-hover text-white;
+                @apply bg-input-option-hover text-tertiary;
             }
         }
     }
@@ -263,7 +263,7 @@
             @apply bg-primary text-white;
 
             span.ns-label {
-                @apply bg-input-background text-primary;
+                @apply bg-input-background text-secondary;
             }
 
             &:disabled {
@@ -277,7 +277,7 @@
             @apply bg-success-tertiary text-white;
 
             span.ns-label {
-                @apply bg-input-background text-success-primary;
+                @apply bg-input-background text-success-secondary;
             }
 
             &:disabled {

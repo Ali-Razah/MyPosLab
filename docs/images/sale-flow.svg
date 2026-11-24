@@ -2,15 +2,15 @@
   <title>What happens when a sale is completed in MyPosLab</title>
   <defs>
     <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06B6D4"/><stop offset="1" stop-color="#4F46E5"/></linearGradient>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#818CF8"/></marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4F46E5"/></marker>
     <style>
-      .box{fill:#111827;stroke:#334155;stroke-width:1.5}
-      .t{font-family:Inter,'Segoe UI',Roboto,Arial,sans-serif;fill:#F1F5F9;font-size:19px;font-weight:700}
-      .s{font-family:Inter,'Segoe UI',Roboto,Arial,sans-serif;fill:#94A3B8;font-size:15px}
-      .l{stroke:#818CF8;stroke-width:2;fill:none;marker-end:url(#arrow)}
+      .box{fill:#FFFFFF;stroke:#E6E3DD;stroke-width:1.5}
+      .t{font-family:Inter,'Segoe UI',Roboto,Arial,sans-serif;fill:#1B1E23;font-size:19px;font-weight:700}
+      .s{font-family:Inter,'Segoe UI',Roboto,Arial,sans-serif;fill:#5D626B;font-size:15px}
+      .l{stroke:#4F46E5;stroke-width:2;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
-  <rect width="1200" height="594" rx="20" fill="#0B1220"/>
+  <rect width="1200" height="594" rx="20" fill="#F5F4F1" stroke="#E6E3DD"/>
   <text x="40" y="52" class="t" style="font-size:24px">One sale, six automatic follow-ups</text>
   <text x="40" y="80" class="s">Each module listens to the same order events, so the cashier only presses “Pay”.</text>
   <rect x="40" y="251.0" width="270" height="150" rx="16" fill="url(#core)"/>

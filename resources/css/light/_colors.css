@@ -1,114 +1,128 @@
+/**
+ * MyPosLab "Sadu Light" palette.
+ *
+ * Daylight counter tool: warm-white ground, white work surfaces with hairline
+ * warm-grey edges, charcoal ink, and one indigo (from the logo) reserved for
+ * the next action and selection. State colours are deep enough to carry white
+ * text (AA) in their -secondary / -tertiary steps and soft enough to tint rows
+ * in their -primary step.
+ */
 @theme {
+    /** Sadu weave (signature band) */
+    --color-sadu-ink: #23262d;
+    --color-sadu-indigo: #4f46e5;
+    --color-sadu-wool: #c9b48b;
+
     /** Typography */
-    --color-typography: var( --color-gray-800 );
-    --color-fontcolor: var( --color-gray-700 );
-    --color-fontcolor-soft: var( --color-gray-500 );
-    --color-fontcolor-hard: rgb( 107 114 128 );
+    --color-typography: #1b1e23;
+    --color-fontcolor: #2a2e35;
+    --color-fontcolor-soft: #5d626b;
+    --color-fontcolor-hard: #464b53;
 
     /** Surfaces */
-    --color-surface: rgb( 209 213 219 );
-    --color-aside-background: var( --color-zinc-900 );
-    --color-aside-color: var( --color-white );
-    --color-aside-menu-background: var( --color-zinc-900 );
-    --color-aside-menu-background-hover: var( --color-zinc-800 );
-    --color-aside-submenu-background: var( --color-zinc-800 );
-    --color-aside-submenu-background-hover: var( --color-zinc-700 );
-    --color-soft-primary: rgb( 75 85 99 );
-    --color-soft-secondary: rgb( 107 114 128 );
-    --color-soft-tertiary: rgb( 156 163 175 );
-    --color-surface-soft: rgb( 229 231 235 );
-    --color-surface-hard: rgb( 250 250 250 );
-    --color-popup-surface: rgb( 250 250 250 );
-    
+    --color-surface: #f5f4f1;
+    --color-aside-background: #ffffff;
+    --color-aside-color: #2a2e35;
+    --color-aside-menu-background: #ffffff;
+    --color-aside-menu-background-hover: #f3f2ef;
+    --color-aside-submenu-background: #fafaf8;
+    --color-aside-submenu-background-hover: #f0efeb;
+    --color-soft-primary: #464b53;
+    --color-soft-secondary: #5d626b;
+    --color-soft-tertiary: #8b9099;
+    --color-surface-soft: #ecebe6;
+    --color-surface-hard: #fbfaf8;
+    --color-popup-surface: #ffffff;
+
     /** Button */
-    --color-button-hover: rgb( 203 213 225 );
-    --color-button-active: rgb( 203 213 225 );
-    
+    --color-button-hover: #ecebe6;
+    --color-button-active: #e4e2dc;
+
     /** Input */
-    --color-input-background: var( --color-gray-200 );
-    --color-input-disabled: rgb( 156 163 175 );
-    --color-input-button: rgb( 244 244 245 );
-    --color-input-button-hover: rgb( 228 228 231 );
-    --color-input-button-active: rgb( 212 212 216 );
-    --color-input-option-hover: rgb( 107 114 128 );
-    --color-input-edge: var( --color-gray-300 );
-    
+    --color-input-background: #ffffff;
+    --color-input-disabled: #a3a7ae;
+    --color-input-button: #ffffff;
+    --color-input-button-hover: #f3f2ef;
+    --color-input-button-active: #e9e7e2;
+    --color-input-option-hover: #eef0ff;
+    --color-input-edge: #d8d5ce;
+
     /** Box */
-    --color-box-edge: var(--color-gray-300);
-    --color-box-background: var( --color-white );
-    --color-box-elevation-background: rgb( 241 245 249 );
-    --color-box-elevation-edge: rgb( 203 213 225 );
-    --color-box-elevation-hover: rgb( 203 213 225 );
+    --color-box-edge: #e6e3dd;
+    --color-box-background: #ffffff;
+    --color-box-elevation-background: #f8f7f4;
+    --color-box-elevation-edge: #e6e3dd;
+    --color-box-elevation-hover: #f0efeb;
 
     /** CRUD */
-    --color-crud-button-edge: var( --color-gray-300 );
-    --color-crud-input-background: var( --color-gray-300 );
+    --color-crud-button-edge: #d8d5ce;
+    --color-crud-input-background: #ffffff;
 
     /** POS */
-    --color-pos-button-edge: var( --color-gray-300 );
+    --color-pos-button-edge: #e6e3dd;
 
     /** Numpad */
-    --color-numpad-background: var( --color-gray-300 );
-    --color-numpad-typography: rgb( 55 65 81 );
-    --color-numpad-edge: var( --color-gray-300 );
-    --color-numpad-hover: var( --color-gray-200 );
-    --color-numpad-hover-edge: var( --color-gray-300 );
+    --color-numpad-background: #ffffff;
+    --color-numpad-typography: #1b1e23;
+    --color-numpad-edge: #e6e3dd;
+    --color-numpad-hover: #f3f2ef;
+    --color-numpad-hover-edge: #d8d5ce;
 
     /** Option */
-    --color-option-hover: rgb( 107 114 128 );
+    --color-option-hover: #eef0ff;
 
     /** Scroll */
-    --color-scroll-thumb: rgb( 55 65 81 );
-    --color-scroll-track: rgb( 0 0 0 );
-    --color-scroll-popup-thumb: rgb( 55 65 81 );
+    --color-scroll-thumb: #cfcbc3;
+    --color-scroll-track: transparent;
+    --color-scroll-popup-thumb: #cfcbc3;
 
     /** Pre */
-    --color-pre: rgb( 107 114 128 );
+    --color-pre: #5d626b;
 
     /** Tabs */
-    --color-tab-active: var( --color-white );
-    --color-tab-active-border: var( --color-gray-300 );
-    --color-tab-inactive: rgb( 229 231 235 );
-    --color-tab-table-th: var( --color-gray-300 );
-    --color-tab-table-th-edge: var( --color-gray-300 );
+    --color-tab-active: #ffffff;
+    --color-tab-active-border: #e6e3dd;
+    --color-tab-inactive: #efeee9;
+    --color-tab-table-th: #f7f6f3;
+    --color-tab-table-th-edge: #e6e3dd;
 
     /** Table */
-    --color-table-th: rgb( 229 231 235 );
-    --color-table-th-edge: var( --color-gray-300 );
+    --color-table-th: #f7f6f3;
+    --color-table-th-edge: #e8e5df;
 
     /** Floating Menu */
-    --color-floating-menu: rgb( 255 255 255 );
-    --color-floating-menu-hover: rgb( 241 245 249 );
-    --color-floating-menu-selected: rgb( 226 232 240 );
-    --color-floating-menu-edge: rgb( 226 232 240 );
+    --color-floating-menu: #ffffff;
+    --color-floating-menu-hover: #f3f2ef;
+    --color-floating-menu-selected: #eef0ff;
+    --color-floating-menu-edge: #e6e3dd;
 
-    /** Base Accent */
-    --color-primary: var( --color-teal-500 );
-    --color-secondary: var( --color-teal-600 );
-    --color-tertiary: var( --color-teal-700 );
+    /** Base Accent: indigo from the logo, reserved for the next action */
+    --color-primary: #6366f1;
+    --color-secondary: #4f46e5;
+    --color-tertiary: #4338ca;
 
     /** Error */
-    --color-error-primary: var( --color-red-200 );
-    --color-error-secondary: var( --color-red-400 );
-    --color-error-tertiary: var( --color-red-600 );
+    --color-error-primary: #fde4e3;
+    --color-error-secondary: #d92d2a;
+    --color-error-tertiary: #b42320;
 
     /** Info */
-    --color-info-primary: var( --color-blue-200 );
-    --color-info-secondary: var( --color-blue-400 );
-    --color-info-tertiary: var( --color-blue-600 );
+    --color-info-primary: #e0ebff;
+    --color-info-secondary: #2563eb;
+    --color-info-tertiary: #1d4ed8;
 
     /** Success */
-    --color-success-primary: var( --color-green-200 );
-    --color-success-secondary: var( --color-green-400);
-    --color-success-tertiary: var( --color-green-600 );
+    --color-success-primary: #dcf5e6;
+    --color-success-secondary: #15803d;
+    --color-success-tertiary: #166534;
 
     /** Warning */
-    --color-warning-primary: var( --color-orange-200);
-    --color-warning-secondary: var( --color-orange-400);
-    --color-warning-tertiary: var( --color-orange-600);
+    --color-warning-primary: #fdf0cf;
+    --color-warning-secondary: #b45309;
+    --color-warning-tertiary: #92400e;
 
     /** Default **/
-    --color-default-primary: var( --color-gray-200 );
-    --color-default-secondary: var( --color-gray-300 );
-    --color-default-tertiary: var( --color-gray-400 );
+    --color-default-primary: #f3f2ef;
+    --color-default-secondary: #e4e2dc;
+    --color-default-tertiary: #a3a7ae;
 }

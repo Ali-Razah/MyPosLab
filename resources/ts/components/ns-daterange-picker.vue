@@ -111,7 +111,7 @@ export default {
 </script>
 <template>
     <div @click="handleDateRangeClick()" class="flex flex-auto flex-col mb-2 ns-daterange-picker">
-        <label :for="field.name" :class="hasError ? 'text-error-primary' : 'text-font'" class="block leading-5 font-medium"><slot></slot></label>
+        <label :for="field.name" :class="hasError ? 'text-error-secondary' : 'text-font'" class="block leading-5 font-medium"><slot></slot></label>
         <div :class="hasError ? 'error' : ''" class="mt-1 relative flex input-group bg-input-background rounded overflow-hidden shadow  focus:shadow-sm">
             <div class="border border-input-edge rounded-tl rounded-bl flex-auto flex">
                 <div v-if="leading" class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

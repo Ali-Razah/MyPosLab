@@ -46,7 +46,7 @@ class DoctorService
             $attribute = new UserAttribute;
             $attribute->user_id = $user->id;
             $attribute->language = ns()->option->get( 'ns_store_language', 'en' );
-            $attribute->theme = ns()->option->get( 'ns_default_theme', 'dark' );
+            $attribute->theme = ns()->option->get( 'ns_default_theme', 'light' );
             $attribute->save();
         }
     }

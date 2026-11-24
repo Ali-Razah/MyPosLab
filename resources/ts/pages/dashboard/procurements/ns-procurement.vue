@@ -813,7 +813,7 @@ export default {
                     <button @click="reloadEntities()" class="outline-none px-4 h-10"><i :class="reloading ? 'animate animate-spin' : ''" class="las la-sync"></i></button>
                 </div>
                 <p class="text-xs text-fontcolor-soft py-1" v-if="form.main.description && form.main.errors.length === 0">{{ form.main.description }}</p>
-                <p class="text-xs py-1 text-error-primary" v-bind:key="index" v-for="(error, index) of form.main.errors">
+                <p class="text-xs py-1 text-error-secondary" v-bind:key="index" v-for="(error, index) of form.main.errors">
                     <span><slot name="error-required">{{ error.identifier }}</slot></span>
                 </p>
             </div>

@@ -54,7 +54,7 @@
                                 <ns-checkbox class="inline-block" :checked="globallyChecked" @change="handleGlobalChange( $event )"></ns-checkbox>
                             </th>
                             <th v-if="prependOptions && showOptions" class="text-left p-1 w-16 border"></th>
-                            <th :key="identifier" @click="sort( identifier )" v-for="(column, identifier) of columns" :style="{ 
+                            <th :key="identifier" :data-column="identifier" @click="sort( identifier )" v-for="(column, identifier) of columns" :style="{ 
                                 'width' : column.width || 'auto', 
                                 'max-width': column.maxWidth || 'auto', 
                                 'min-width': column.minWidth || 'auto' 

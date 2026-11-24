@@ -70,3 +70,6 @@ playwright/.auth/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# design review captures (local evidence)
+.impeccable/review/
