@@ -13,6 +13,27 @@ return [
 
     /**
      * --------------------------------------------------------------------
+     *  Telemetry
+     * --------------------------------------------------------------------
+     *
+     * When enabled, the installation reports its host name, core version and
+     * enabled modules once a day to the upstream NexoPOS platform
+     * (my.nexopos.com). MyPosLab keeps this off unless NS_TELEMETRY=true.
+     */
+    'telemetry' => (bool) env( 'NS_TELEMETRY', false ),
+
+    /**
+     * --------------------------------------------------------------------
+     *  Upstream marketplace ads
+     * --------------------------------------------------------------------
+     *
+     * The dashboard can show promotional banners fetched from the upstream
+     * NexoPOS marketplace. MyPosLab hides them unless NS_UPSTREAM_ADS=true.
+     */
+    'upstream_ads' => (bool) env( 'NS_UPSTREAM_ADS', false ),
+
+    /**
+     * --------------------------------------------------------------------
      *  Supported Languages
      * --------------------------------------------------------------------
      *

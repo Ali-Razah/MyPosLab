@@ -53,6 +53,10 @@ class DashboardController extends Controller
 
     public function dispatchTelemetry()
     {
+        if ( ! config( 'nexopos.telemetry' ) ) {
+            return response()->json( ['status' => 'skipped', 'message' => 'Telemetry is disabled.'] );
+        }
+
         $version = config( 'nexopos.version' );
         $modules = app()->make( ModulesService::class )->get();
 

@@ -96,11 +96,12 @@ if ( Auth::check() ) {
                     @endif
                 </div>
                 <div class="p-2 text-xs flex justify-end text-gray-500">
-                    {!! Hook::filter( 'ns-footer-signature', sprintf(
+                    {{-- wrapped in a span: as a direct flex child, the spaces around the link would collapse --}}
+                    <span>{!! Hook::filter( 'ns-footer-signature', sprintf(
                         __( 'MyPosLab %s &middot; built on %s (GPL-3.0)' ),
                         e( config( 'nexopos.version' ) ),
                         '<a target="_blank" rel="noopener" href="https://github.com/Blair2004/NexoPOS" class="hover:text-blue-400">NexoPOS</a>'
-                    ) ) !!}
+                    ) ) !!}</span>
                 </div>
             </div>
             @endif

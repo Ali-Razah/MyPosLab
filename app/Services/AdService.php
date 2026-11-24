@@ -36,6 +36,11 @@ class AdService
      */
     public function getAdToDisplay( $user, ?string $routeName ): ?array
     {
+        // MyPosLab: upstream marketplace ads are opt-in (NS_UPSTREAM_ADS=true).
+        if ( ! config( 'nexopos.upstream_ads' ) ) {
+            return null;
+        }
+
         // Check if the user has snoozed ads
         $userOptions = new UserOptions( $user->id );
         if ( $userOptions->get( 'snooze_ads_24h' ) === 'yes' ) {

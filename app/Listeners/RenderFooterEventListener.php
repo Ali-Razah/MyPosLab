@@ -9,6 +9,10 @@ class RenderFooterEventListener
 {
     public function handle( RenderFooterEvent $event )
     {
+        if ( ! config( 'nexopos.telemetry' ) ) {
+            return;
+        }
+
         $lastSent = ns()->option->get( 'ns_telemetry_last_sent' );
         $needsSend = empty( $lastSent ) || Carbon::parse( $lastSent )->diffInHours( now() ) >= 24;
 
