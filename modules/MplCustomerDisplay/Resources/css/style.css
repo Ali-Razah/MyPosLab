@@ -1,0 +1,101 @@
+/* Theme + utilities only: core theme CSS already ships the preflight. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(mplcd);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(mplcd);
+
+/* Limit scanning to this module. */
+@source "../ts/**/*.{vue,ts}";
+@source "../Views/**/*.blade.php";
+
+/*
+ * Bridge the host NexoPOS theme variables (light/dark) into the prefixed
+ * module theme so mplcd:bg-box-background etc. follow the active theme.
+ */
+@theme {
+    --color-box-background: var(--color-box-background);
+    --color-box-edge: var(--color-box-edge);
+    --color-box-elevation-background: var(--color-box-elevation-background);
+    --color-box-elevation-edge: var(--color-box-elevation-edge);
+    --color-fontcolor: var(--color-fontcolor);
+    --color-fontcolor-soft: var(--color-fontcolor-soft);
+    --color-fontcolor-hard: var(--color-fontcolor-hard);
+    --color-surface: var(--color-surface);
+    --color-surface-soft: var(--color-surface-soft);
+    --color-surface-hard: var(--color-surface-hard);
+    --color-info-primary: var(--color-info-primary);
+    --color-info-secondary: var(--color-info-secondary);
+    --color-info-tertiary: var(--color-info-tertiary);
+    --color-success-primary: var(--color-success-primary);
+    --color-success-secondary: var(--color-success-secondary);
+    --color-success-tertiary: var(--color-success-tertiary);
+    --color-warning-primary: var(--color-warning-primary);
+    --color-warning-secondary: var(--color-warning-secondary);
+    --color-warning-tertiary: var(--color-warning-tertiary);
+    --color-error-primary: var(--color-error-primary);
+    --color-error-secondary: var(--color-error-secondary);
+    --color-error-tertiary: var(--color-error-tertiary);
+}
+
+/* Plain CSS hooks (not Tailwind utilities). */
+.mplcd-body {
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--color-surface);
+    color: var(--color-fontcolor);
+    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: tabular-nums;
+}
+
+.mplcd-arabic {
+    font-family: "Noto Kufi Arabic", "Segoe UI", Tahoma, "Geeza Pro", "Arial", sans-serif;
+}
+
+.mplcd-lines {
+    scroll-behavior: smooth;
+}
+
+.mplcd-line-enter {
+    animation: mplcd-line-in 320ms ease-out;
+}
+
+.mplcd-fade {
+    animation: mplcd-fade-in 400ms ease-out;
+}
+
+.mplcd-slide {
+    transition: opacity 900ms ease-in-out;
+}
+
+@keyframes mplcd-line-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+        background-color: var(--color-info-primary);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mplcd-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mplcd-line-enter,
+    .mplcd-fade {
+        animation: none;
+    }
+
+    .mplcd-slide {
+        transition: none;
+    }
+}

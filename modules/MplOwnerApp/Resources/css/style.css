@@ -1,0 +1,73 @@
+@import "tailwindcss" prefix(oa);
+
+/* Limit scanning to this module. */
+@source "../ts/**/*.{vue,ts}";
+@source "../Views/**/*.blade.php";
+
+/* Bridge NexoPOS semantic theme roles so prefixed utilities track light/dark/phosphor. */
+@theme {
+    --color-box-background: var(--color-box-background);
+    --color-box-edge: var(--color-box-edge);
+    --color-box-elevation-background: var(--color-box-elevation-background);
+    --color-box-elevation-edge: var(--color-box-elevation-edge);
+    --color-box-elevation-hover: var(--color-box-elevation-hover);
+    --color-fontcolor: var(--color-fontcolor);
+    --color-fontcolor-soft: var(--color-fontcolor-soft);
+    --color-fontcolor-hard: var(--color-fontcolor-hard);
+    --color-surface: var(--color-surface);
+    --color-surface-soft: var(--color-surface-soft);
+    --color-surface-hard: var(--color-surface-hard);
+    --color-info-primary: var(--color-info-primary);
+    --color-info-secondary: var(--color-info-secondary);
+    --color-info-tertiary: var(--color-info-tertiary);
+    --color-success-primary: var(--color-success-primary);
+    --color-success-secondary: var(--color-success-secondary);
+    --color-success-tertiary: var(--color-success-tertiary);
+    --color-warning-primary: var(--color-warning-primary);
+    --color-warning-secondary: var(--color-warning-secondary);
+    --color-warning-tertiary: var(--color-warning-tertiary);
+    --color-error-primary: var(--color-error-primary);
+    --color-error-secondary: var(--color-error-secondary);
+    --color-error-tertiary: var(--color-error-tertiary);
+}
+
+.mplowner-body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: var(--color-surface);
+    color: var(--color-fontcolor);
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: contain;
+}
+
+.mplowner-skeleton {
+    background: linear-gradient(90deg, var(--color-box-edge) 25%, var(--color-box-elevation-background) 50%, var(--color-box-edge) 75%);
+    background-size: 200% 100%;
+    animation: mplowner-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes mplowner-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mplowner-skeleton { animation: none; }
+}
+
+.mplowner-safe-top {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+.mplowner-safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.mplowner-chips {
+    scrollbar-width: none;
+}
+
+.mplowner-chips::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,29 @@
+{
+  "Resources/css/style.css": {
+    "file": "assets/style-TPmD9nvo.css",
+    "src": "Resources/css/style.css",
+    "isEntry": true,
+    "name": "style",
+    "names": [
+      "style.css"
+    ]
+  },
+  "Resources/ts/widgets.ts": {
+    "file": "assets/widgets-Db1hT8y2.js",
+    "name": "widgets",
+    "src": "Resources/ts/widgets.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "Resources/ts/widgets/MplBatchesExpiringSoonWidget.vue"
+    ]
+  },
+  "Resources/ts/widgets/MplBatchesExpiringSoonWidget.vue": {
+    "file": "assets/MplBatchesExpiringSoonWidget-BEG5Qzul.js",
+    "name": "MplBatchesExpiringSoonWidget",
+    "src": "Resources/ts/widgets/MplBatchesExpiringSoonWidget.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "Resources/ts/widgets.ts"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "Resources/css/style.css": {
+    "file": "assets/style-CmVjJFjO.css",
+    "src": "Resources/css/style.css",
+    "isEntry": true,
+    "name": "style",
+    "names": [
+      "style.css"
+    ]
+  },
+  "Resources/ts/display.ts": {
+    "file": "assets/display-DXGmJ1Ly.js",
+    "name": "display",
+    "src": "Resources/ts/display.ts",
+    "isEntry": true,
+    "imports": [
+      "_i18n-CRFE7EtG.js"
+    ]
+  },
+  "Resources/ts/pos.ts": {
+    "file": "assets/pos-sw4TncqC.js",
+    "name": "pos",
+    "src": "Resources/ts/pos.ts",
+    "isEntry": true,
+    "imports": [
+      "_i18n-CRFE7EtG.js"
+    ]
+  },
+  "_i18n-CRFE7EtG.js": {
+    "file": "assets/i18n-CRFE7EtG.js",
+    "name": "i18n"
+  }
+}

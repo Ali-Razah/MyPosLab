@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>MplBranches</namespace>
+    <version>1.0</version>
+    <author>MyPosLab</author>
+    <name>MyPosLab Branches</name>
+    <description>
+        <locale lang="en">Multiple branches with branch-tagged sales, registers, users and reports</locale>
+    </description>
+</module>

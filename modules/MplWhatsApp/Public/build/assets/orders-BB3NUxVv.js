@@ -1,0 +1,1 @@
+import{m as o,S as n}from"./SendReceiptPopup-Cat_Ljx1.js";const t=o(n);document.addEventListener("DOMContentLoaded",()=>{nsEvent.subject().subscribe(e=>{e?.identifier==="ns-table-row-action"&&e.value?.action?.identifier==="mplwhatsapp.send"&&Popup.show(t,{orderId:e.value.row.id})})});
