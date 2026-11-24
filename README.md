@@ -208,8 +208,8 @@ Most settings are in the dashboard (**Settings**, and each module's own settings
 |---|---|---|
 | `APP_URL` | — | Public address of the installation |
 | `SANCTUM_STATEFUL_DOMAINS` | — | Domain(s) the dashboard is opened on |
-| `NS_TELEMETRY` | `false` | When `true`, reports host name, version and enabled modules once a day to the upstream NexoPOS platform. Off by default in MyPosLab. |
-| `NS_UPSTREAM_ADS` | `false` | When `true`, shows promotional banners from the upstream NexoPOS marketplace on the dashboard. Off by default in MyPosLab. |
+| `NS_TELEMETRY` | `false` | When `true`, reports host name, version and enabled modules once a day to an external vendor server. Off by default. |
+| `NS_UPSTREAM_ADS` | `false` | When `true`, shows third-party promotional banners on the dashboard. Off by default. |
 
 ---
 
@@ -243,4 +243,4 @@ docs/images          README images
 
 ## License
 
-MyPosLab is based on [NexoPOS](https://github.com/Blair2004/NexoPOS) by Blair2004 (see [NOTICE](NOTICE)) and is licensed under the [GNU GPL v3.0](LICENSE).
+MyPosLab is free software licensed under the [GNU GPL v3.0](LICENSE).
