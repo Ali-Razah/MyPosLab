@@ -33,7 +33,7 @@ It suits supermarkets and groceries, pharmacies, mobile and electronics stores, 
 - [Configuration](#configuration)
 - [Running the tests](#running-the-tests)
 - [Project layout](#project-layout)
-- [Credits and license](#credits-and-license)
+- [License](#license)
 
 ---
 
@@ -241,10 +241,6 @@ docs/images          README images
 
 ---
 
-## Credits and license
+## License
 
-MyPosLab is based on **[NexoPOS](https://github.com/Blair2004/NexoPOS)** by Blair2004 and its contributors. See [NOTICE](NOTICE) for what was changed. Internal names such as `nexopos_*` database tables are kept on purpose, so existing databases and NexoPOS modules stay compatible.
-
-Some optional extensions (restaurant tables, NexoPOS MultiStore and others) are sold separately by the NexoPOS author on the [NexoPOS Marketplace](https://my.nexopos.com/en/marketplace). They are not part of this repository.
-
-MyPosLab is free software under the **[GNU General Public License v3.0](LICENSE)**, the same license as NexoPOS. You may use, change and share it; if you distribute a modified version, it must stay under the GPL and include its source code.
+MyPosLab is based on [NexoPOS](https://github.com/Blair2004/NexoPOS) by Blair2004 (see [NOTICE](NOTICE)) and is licensed under the [GNU GPL v3.0](LICENSE).
