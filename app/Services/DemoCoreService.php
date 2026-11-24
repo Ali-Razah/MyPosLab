@@ -171,32 +171,25 @@ class DemoCoreService
      */
     public function createTaxes()
     {
-        $taxGroup = TaxGroup::where( 'name', __( 'GST' ) )->first();
+        /**
+         * MyPosLab targets the UAE, so the demo uses the standard
+         * UAE VAT rate (5%) instead of the upstream GST sample taxes.
+         */
+        $taxGroup = TaxGroup::where( 'name', __( 'VAT' ) )->first();
 
         if ( ! $taxGroup instanceof TaxGroup ) {
             $taxGroup = new TaxGroup;
-            $taxGroup->name = __( 'GST' );
+            $taxGroup->name = __( 'VAT' );
             $taxGroup->author_id = Role::namespace( 'admin' )->users()->first()->id;
             $taxGroup->save();
         }
 
-        $tax = Tax::where( 'name', __( 'SGST' ) )->first();
+        $tax = Tax::where( 'name', __( 'VAT 5%' ) )->first();
 
         if ( ! $tax instanceof Tax ) {
             $tax = new Tax;
-            $tax->name = __( 'SGST' );
-            $tax->rate = 8;
-            $tax->tax_group_id = $taxGroup->id;
-            $tax->author_id = Role::namespace( 'admin' )->users()->first()->id;
-            $tax->save();
-        }
-
-        $tax = Tax::where( 'name', __( 'CGST' ) )->first();
-
-        if ( ! $tax instanceof Tax ) {
-            $tax = new Tax;
-            $tax->name = __( 'CGST' );
-            $tax->rate = 8;
+            $tax->name = __( 'VAT 5%' );
+            $tax->rate = 5;
             $tax->tax_group_id = $taxGroup->id;
             $tax->author_id = Role::namespace( 'admin' )->users()->first()->id;
             $tax->save();

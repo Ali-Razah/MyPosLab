@@ -134,7 +134,12 @@ class DemoService extends DemoCoreService
                     'name' => $product->name,
                     'sku' => $random,
                     'barcode' => $random,
-                    'barcode_type' => ns()->option->get( 'ns_pos_default_barcode_type', 'code128' ),
+                    /**
+                     * The demo barcode is a random alphanumeric string, so it must use a
+                     * symbology that accepts letters. Numeric-only types such as UPC-E or
+                     * EAN-13 (which a store may set as default) would make the demo fail.
+                     */
+                    'barcode_type' => 'code128',
                     'category_id' => $createdCategory[ 'id' ],
                     'description' => __( 'generated' ),
                     'type' => 'dematerialized',

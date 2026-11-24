@@ -729,7 +729,18 @@ class ProductService
             $product->default_purchase_unit_id = $fields[ 'units' ][ 'default_purchase_unit_id' ] ?? null;
             $product->scheduled_reorder_quantity = $fields[ 'units' ][ 'scheduled_reorder_quantity' ] ?? null;
             $product->accurate_tracking = $fields[ 'units' ][ 'accurate_tracking' ] ?? false;
-            $product->auto_cogs = $fields[ 'units' ][ 'auto_cogs' ] ?? false;
+            /**
+             * When the field isn't provided (API, imports, demo), keep the current value
+             * for existing products. New products follow the schema/form default (enabled)
+             * unless a manual COGS was supplied for a unit, which signals manual costing.
+             * Defaulting to false here left those products without COGS, so every profit
+             * report counted their whole sale price as profit.
+             */
+            $hasManualCogs = collect( $fields[ 'units' ][ 'selling_group' ] ?? [] )
+                ->contains( fn( $unit ) => (float) ( $unit[ 'cogs' ] ?? 0 ) > 0 );
+
+            $product->auto_cogs = $fields[ 'units' ][ 'auto_cogs' ]
+                ?? ( $product->exists ? (bool) $product->auto_cogs : ! $hasManualCogs );
         }
     }
 
