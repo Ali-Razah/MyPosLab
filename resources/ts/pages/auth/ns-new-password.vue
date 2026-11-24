@@ -1,5 +1,5 @@
 <template>
-    <div class="ns-box rounded shadow overflow-hidden transition-all duration-100">
+    <div class="ns-box mpl-auth-card rounded-lg shadow overflow-hidden transition-all duration-100">
         <div class="p-3">
             <div class="py-2 fade-in-entrance anim-duration-300" v-if="fields.length > 0">
                 <ns-field :key="index" v-for="(field, index) of fields" :field="field"></ns-field>

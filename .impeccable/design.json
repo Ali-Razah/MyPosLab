@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T12:30:33.593Z",
+  "title": "Design System: MyPosLab",
+  "extensions": {
+    "colorMeta": {
+      "sadu-ink": {
+        "role": "secondary",
+        "displayName": "Sadu Ink Charcoal",
+        "canonical": "#23262d",
+        "cssVariable": "--color-sadu-ink",
+        "tonalRamp": [
+          "#090b11",
+          "#21242b",
+          "#3c4047",
+          "#5a5e66",
+          "#7c8089",
+          "#a1a5ae",
+          "#c6cad4",
+          "#eaeef8"
+        ]
+      },
+      "sadu-indigo": {
+        "role": "secondary",
+        "displayName": "Sadu Weave Indigo",
+        "canonical": "#4f46e5",
+        "cssVariable": "--color-sadu-indigo",
+        "tonalRamp": [
+          "#070031",
+          "#1b016e",
+          "#3201b3",
+          "#483bda",
+          "#6668fe",
+          "#8e9aff",
+          "#bdc7fe",
+          "#eaeefe"
+        ]
+      },
+      "sadu-wool": {
+        "role": "secondary",
+        "displayName": "Sadu Wool Sand",
+        "canonical": "#c9b48b",
+        "cssVariable": "--color-sadu-wool",
+        "tonalRamp": [
+          "#110a00",
+          "#302101",
+          "#4f3d16",
+          "#6e5b35",
+          "#917e56",
+          "#b7a27a",
+          "#ddc89e",
+          "#ffecc9"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Logo Indigo",
+        "canonical": "#6366f1",
+        "cssVariable": "--color-primary",
+        "tonalRamp": [
+          "#070031",
+          "#1b006e",
+          "#311aa7",
+          "#4943cc",
+          "#676bf6",
+          "#8f9aff",
+          "#bdc7fe",
+          "#eaeefe"
+        ]
+      },
+      "secondary": {
+        "role": "primary",
+        "displayName": "Sadu Indigo",
+        "canonical": "#4f46e5",
+        "cssVariable": "--color-secondary",
+        "tonalRamp": [
+          "#070031",
+          "#1b016e",
+          "#3201b3",
+          "#483bda",
+          "#6668fe",
+          "#8e9aff",
+          "#bdc7fe",
+          "#eaeefe"
+        ]
+      },
+      "tertiary": {
+        "role": "primary",
+        "displayName": "Deep Indigo",
+        "canonical": "#4338ca",
+        "cssVariable": "--color-tertiary",
+        "tonalRamp": [
+          "#070030",
+          "#1b006e",
+          "#3112ac",
+          "#4840d2",
+          "#6668fc",
+          "#8e9aff",
+          "#bdc7fe",
+          "#eaedfe"
+        ]
+      },
+      "selection-tint": {
+        "role": "primary",
+        "displayName": "Selection Tint",
+        "canonical": "#eef0ff",
+        "cssVariable": "--color-option-hover",
+        "tonalRamp": [
+          "#090a14",
+          "#22232e",
+          "#3d3f4b",
+          "#5b5d69",
+          "#7d7f8c",
+          "#a2a3b1",
+          "#c7c9d8",
+          "#ebedfc"
+        ]
+      },
+      "typography": {
+        "role": "neutral",
+        "displayName": "Headline Ink",
+        "canonical": "#1b1e23",
+        "cssVariable": "--color-typography",
+        "tonalRamp": [
+          "#090b10",
+          "#212429",
+          "#3d4046",
+          "#5a5e64",
+          "#7d8087",
+          "#a1a5ab",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "fontcolor": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "canonical": "#2a2e35",
+        "cssVariable": "--color-fontcolor",
+        "tonalRamp": [
+          "#080b11",
+          "#20242b",
+          "#3c4047",
+          "#595e66",
+          "#7c8089",
+          "#a0a5ae",
+          "#c6cbd4",
+          "#e9eff8"
+        ]
+      },
+      "fontcolor-hard": {
+        "role": "neutral",
+        "displayName": "Firm Ink",
+        "canonical": "#464b53",
+        "cssVariable": "--color-fontcolor-hard",
+        "tonalRamp": [
+          "#080b11",
+          "#20242b",
+          "#3b4048",
+          "#595e66",
+          "#7b8189",
+          "#9fa5ae",
+          "#c5cbd4",
+          "#e9eff9"
+        ]
+      },
+      "fontcolor-soft": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#5d626b",
+        "cssVariable": "--color-fontcolor-soft",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3b4048",
+          "#595e67",
+          "#7b808a",
+          "#9fa5af",
+          "#c5cbd5",
+          "#e9eff9"
+        ]
+      },
+      "input-disabled": {
+        "role": "neutral",
+        "displayName": "Disabled Grey",
+        "canonical": "#a3a7ae",
+        "cssVariable": "--color-input-disabled",
+        "tonalRamp": [
+          "#090b10",
+          "#21242a",
+          "#3c4046",
+          "#5a5e64",
+          "#7d8087",
+          "#a1a5ac",
+          "#c7cbd2",
+          "#eaeff6"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Warm White Ground",
+        "canonical": "#f5f4f1",
+        "cssVariable": "--color-surface",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252422",
+          "#40403d",
+          "#5e5d5b",
+          "#81807d",
+          "#a5a4a2",
+          "#cbcac7",
+          "#efeeeb"
+        ]
+      },
+      "surface-hard": {
+        "role": "neutral",
+        "displayName": "Near-White",
+        "canonical": "#fbfaf8",
+        "cssVariable": "--color-surface-hard",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#252422",
+          "#40403e",
+          "#5e5d5c",
+          "#81807e",
+          "#a5a4a2",
+          "#cbcac8",
+          "#efeeec"
+        ]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "Linen",
+        "canonical": "#ecebe6",
+        "cssVariable": "--color-surface-soft",
+        "tonalRamp": [
+          "#0c0b08",
+          "#252420",
+          "#41403c",
+          "#5e5e59",
+          "#81807c",
+          "#a6a5a0",
+          "#cbcbc6",
+          "#f0eee9"
+        ]
+      },
+      "box-background": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "cssVariable": "--color-box-background",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ]
+      },
+      "table-th": {
+        "role": "neutral",
+        "displayName": "Header Linen",
+        "canonical": "#f7f6f3",
+        "cssVariable": "--color-table-th",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252422",
+          "#40403d",
+          "#5e5d5b",
+          "#81807d",
+          "#a5a4a2",
+          "#cbcac7",
+          "#efeeeb"
+        ]
+      },
+      "aside-menu-background-hover": {
+        "role": "neutral",
+        "displayName": "Hover Linen",
+        "canonical": "#f3f2ef",
+        "cssVariable": "--color-aside-menu-background-hover",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252422",
+          "#40403d",
+          "#5e5d5b",
+          "#81807d",
+          "#a5a4a2",
+          "#cbcac7",
+          "#efeeeb"
+        ]
+      },
+      "box-edge": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e6e3dd",
+        "cssVariable": "--color-box-edge",
+        "tonalRamp": [
+          "#0d0b07",
+          "#26241f",
+          "#423f3b",
+          "#605d58",
+          "#83807a",
+          "#a7a49f",
+          "#cdcac4",
+          "#f1eee8"
+        ]
+      },
+      "input-edge": {
+        "role": "neutral",
+        "displayName": "Field Edge",
+        "canonical": "#d8d5ce",
+        "cssVariable": "--color-input-edge",
+        "tonalRamp": [
+          "#0d0b07",
+          "#26241f",
+          "#423f3a",
+          "#605d57",
+          "#83807a",
+          "#a7a49e",
+          "#cdcac3",
+          "#f1eee7"
+        ]
+      },
+      "scroll-thumb": {
+        "role": "neutral",
+        "displayName": "Scroll Thumb",
+        "canonical": "#cfcbc3",
+        "cssVariable": "--color-scroll-thumb",
+        "tonalRamp": [
+          "#0d0b06",
+          "#27241e",
+          "#433f39",
+          "#615d56",
+          "#838078",
+          "#a8a49c",
+          "#cecac2",
+          "#f2eee6"
+        ]
+      },
+      "success-primary": {
+        "role": "state",
+        "displayName": "Paid Green Tint",
+        "canonical": "#dcf5e6",
+        "cssVariable": "--color-success-primary",
+        "tonalRamp": [
+          "#000f06",
+          "#15291e",
+          "#31453a",
+          "#4e6457",
+          "#708779",
+          "#94ab9d",
+          "#b9d2c3",
+          "#ddf6e7"
+        ]
+      },
+      "success-secondary": {
+        "role": "state",
+        "displayName": "Paid Green",
+        "canonical": "#15803d",
+        "cssVariable": "--color-success-secondary",
+        "tonalRamp": [
+          "#001003",
+          "#002d10",
+          "#014e20",
+          "#027132",
+          "#349652",
+          "#5dbc75",
+          "#84e49a",
+          "#c7ffd1"
+        ]
+      },
+      "success-tertiary": {
+        "role": "state",
+        "displayName": "Paid Green Deep",
+        "canonical": "#166534",
+        "cssVariable": "--color-success-tertiary",
+        "tonalRamp": [
+          "#001004",
+          "#012d12",
+          "#014e23",
+          "#226e3d",
+          "#49925e",
+          "#6eb882",
+          "#94dfa7",
+          "#c8ffd4"
+        ]
+      },
+      "warning-primary": {
+        "role": "state",
+        "displayName": "Attention Amber Tint",
+        "canonical": "#fdf0cf",
+        "cssVariable": "--color-warning-primary",
+        "tonalRamp": [
+          "#100a00",
+          "#2d2306",
+          "#493f23",
+          "#685d40",
+          "#8b7f61",
+          "#b0a485",
+          "#d6caaa",
+          "#fbeecd"
+        ]
+      },
+      "warning-secondary": {
+        "role": "state",
+        "displayName": "Attention Amber",
+        "canonical": "#b45309",
+        "cssVariable": "--color-warning-secondary",
+        "tonalRamp": [
+          "#180500",
+          "#3e1700",
+          "#682c00",
+          "#944202",
+          "#c36120",
+          "#ec864a",
+          "#feb893",
+          "#ffeadf"
+        ]
+      },
+      "warning-tertiary": {
+        "role": "state",
+        "displayName": "Attention Amber Deep",
+        "canonical": "#92400e",
+        "cssVariable": "--color-warning-tertiary",
+        "tonalRamp": [
+          "#190500",
+          "#3f1600",
+          "#692a01",
+          "#944211",
+          "#bc663a",
+          "#e48a5e",
+          "#ffb896",
+          "#ffeae0"
+        ]
+      },
+      "error-primary": {
+        "role": "state",
+        "displayName": "Void Red Tint",
+        "canonical": "#fde4e3",
+        "cssVariable": "--color-error-primary",
+        "tonalRamp": [
+          "#150607",
+          "#301f1e",
+          "#4d3a3a",
+          "#6d5857",
+          "#907a79",
+          "#b59e9d",
+          "#dcc4c3",
+          "#fee9e8"
+        ]
+      },
+      "error-secondary": {
+        "role": "state",
+        "displayName": "Void Red",
+        "canonical": "#d92d2a",
+        "cssVariable": "--color-error-secondary",
+        "tonalRamp": [
+          "#1f0000",
+          "#4b0003",
+          "#7c0208",
+          "#b2000e",
+          "#e13732",
+          "#ff7266",
+          "#ffb5ab",
+          "#fee9e6"
+        ]
+      },
+      "error-tertiary": {
+        "role": "state",
+        "displayName": "Void Red Deep",
+        "canonical": "#b42320",
+        "cssVariable": "--color-error-tertiary",
+        "tonalRamp": [
+          "#1f0000",
+          "#4b0102",
+          "#7d0006",
+          "#ad1919",
+          "#d7483e",
+          "#fe7366",
+          "#feb5ab",
+          "#fee9e6"
+        ]
+      },
+      "info-primary": {
+        "role": "state",
+        "displayName": "Info Blue Tint",
+        "canonical": "#e0ebff",
+        "cssVariable": "--color-info-primary",
+        "tonalRamp": [
+          "#050b18",
+          "#1c2433",
+          "#374050",
+          "#555e6f",
+          "#778192",
+          "#9ba5b8",
+          "#c0cbde",
+          "#e6efff"
+        ]
+      },
+      "info-secondary": {
+        "role": "state",
+        "displayName": "Info Blue",
+        "canonical": "#2563eb",
+        "cssVariable": "--color-info-secondary",
+        "tonalRamp": [
+          "#00062c",
+          "#001962",
+          "#00309e",
+          "#104dd4",
+          "#3575fe",
+          "#74a2fe",
+          "#b0cbfe",
+          "#e6efff"
+        ]
+      },
+      "info-tertiary": {
+        "role": "state",
+        "displayName": "Info Blue Deep",
+        "canonical": "#1d4ed8",
+        "cssVariable": "--color-info-tertiary",
+        "tonalRamp": [
+          "#000035",
+          "#010078",
+          "#0222af",
+          "#1b4bd5",
+          "#3c73fe",
+          "#77a2fe",
+          "#b1cbfe",
+          "#e7efff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The POS TOTAL figure; the largest number on the till."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles (600, tight) and dashboard KPI figures (700, -0.01em)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Panel and widget headings, cart product names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text; menu items at 500, buttons at 600. Tabular numerals on."
+      },
+      "body-dense": {
+        "displayName": "Body Dense",
+        "purpose": "Table cells and product-tile names (500, two-line clamp)."
+      },
+      "description": {
+        "displayName": "Description",
+        "purpose": "Field help text in muted ink; the smallest running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Table and cart column headers, uppercase; status stamps at the same size without uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hairline-lift",
+        "value": "0 1px 2px rgb(35 38 45 / .06)",
+        "purpose": "Buttons, round header tools, user pill."
+      },
+      {
+        "name": "panel",
+        "value": "0 1px 2px rgb(35 38 45 / .05), 0 4px 12px -6px rgb(35 38 45 / .08)",
+        "purpose": "Boxes, CRUD tables, tab bodies, KPI cards."
+      },
+      {
+        "name": "work-surface",
+        "value": "0 1px 2px rgb(35 38 45 / .05), 0 6px 16px -8px rgb(35 38 45 / .10)",
+        "purpose": "POS cart table and product grid container."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px rgb(79 70 229 / .14)",
+        "purpose": "Input group with focus inside (border shifts to secondary)."
+      },
+      {
+        "name": "tile-selected",
+        "value": "inset 0 0 0 2px var(--color-secondary)",
+        "purpose": "Hovered product tile."
+      },
+      {
+        "name": "focus-outline",
+        "value": "outline: 2px solid var(--color-secondary); outline-offset: 2px",
+        "purpose": "Global :focus-visible."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-change",
+        "value": "150ms ease-out",
+        "purpose": "Background, border, colour and shadow transitions on buttons, menu items, inputs, cart rows and tiles."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition-duration: 0s",
+        "purpose": "Applied to everything under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px",
+        "note": "Below 768px KPI cards stack label over figure and size to content; POS switches to Cart / Products tabs."
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "signature": {
+      "saduBand": {
+        "tile": "24x6px repeat-x",
+        "colors": {
+          "ground": "#23262d",
+          "up": "#4f46e5",
+          "down": "#c9b48b"
+        },
+        "backgroundImage": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%2323262d'/%3E%3Cpath d='M0 6 6 0 12 6Z' fill='%234f46e5'/%3E%3Cpath d='M12 0 18 6 24 0Z' fill='%23c9b48b'/%3E%3C/svg%3E\")",
+        "verticalMark": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='24' viewBox='0 0 6 24'%3E%3Crect width='6' height='24' fill='%2323262d'/%3E%3Cpath d='M0 0 6 6 0 12Z' fill='%234f46e5'/%3E%3Cpath d='M6 12 0 18 6 24Z' fill='%23c9b48b'/%3E%3C/svg%3E\")",
+        "placements": [
+          "sidebar logo base",
+          "POS total row top edge",
+          "sign-in card top edge",
+          "active menu item leading edge (6x24, mirrors in RTL)"
+        ],
+        "className": ".mpl-sadu"
+      }
+    },
+    "alternates": {
+      "note": "dark and phosphor themes exist as alternate token sets in resources/css/{dark,phosphor}; they are not part of Sadu Light and are not documented here."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single next action on a screen (Save, Sign In, Submit). Indigo fill, darkens to deep indigo.",
+      "html": "<button class=\"ds-btn-primary\">Sign In</button>",
+      "css": ".ds-btn-primary { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; background: var(--color-secondary, #4f46e5); color: #fff; border: 1px solid var(--color-secondary, #4f46e5); border-radius: 4px; padding: 8px 12px; font-size: 1rem; font-weight: 600; box-shadow: 0 1px 2px rgb(35 38 45 / .06); cursor: pointer; transition: background-color .15s ease-out, border-color .15s ease-out; } .ds-btn-primary:hover { background: var(--color-tertiary, #4338ca); border-color: var(--color-tertiary, #4338ca); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-secondary, #4f46e5); outline-offset: 2px; } .ds-btn-primary:active { background: var(--color-tertiary, #4338ca); }"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Every other action: white, field-edge hairline, body ink.",
+      "html": "<button class=\"ds-btn-default\">Dismiss</button>",
+      "css": ".ds-btn-default { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; background: var(--color-input-button, #ffffff); color: var(--color-fontcolor, #2a2e35); border: 1px solid var(--color-input-edge, #d8d5ce); border-radius: 4px; padding: 8px 12px; font-size: 1rem; font-weight: 600; box-shadow: 0 1px 2px rgb(35 38 45 / .06); cursor: pointer; transition: background-color .15s ease-out, color .15s ease-out; } .ds-btn-default:hover { background: var(--color-input-button-hover, #f3f2ef); color: var(--color-typography, #1b1e23); } .ds-btn-default:focus-visible { outline: 2px solid var(--color-secondary, #4f46e5); outline-offset: 2px; } .ds-btn-default:active { background: var(--color-input-button-active, #e9e7e2); }"
+    },
+    {
+      "name": "Toolbar Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Destructive tool in a toolbar (POS Reset, Void): quiet white with red text, tints red only on hover.",
+      "html": "<button class=\"ds-btn-danger-quiet\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M8 6V4h8v2\"/><path d=\"M19 6l-1 14H6L5 6\"/></svg>Reset</button>",
+      "css": ".ds-btn-danger-quiet { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; gap: 6px; background: var(--color-box-background, #ffffff); color: var(--color-error-secondary, #d92d2a); border: 1px solid var(--color-box-edge, #e6e3dd); border-radius: 4px; padding: 8px 12px; font-size: 1rem; font-weight: 500; box-shadow: 0 1px 2px rgb(35 38 45 / .06); cursor: pointer; transition: background-color .15s ease-out, color .15s ease-out; } .ds-btn-danger-quiet:hover { background: var(--color-error-primary, #fde4e3); border-color: var(--color-error-primary, #fde4e3); color: var(--color-error-tertiary, #b42320); } .ds-btn-danger-quiet:focus-visible { outline: 2px solid var(--color-secondary, #4f46e5); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Label above, white field with field-edge border, indigo border and 3px halo on focus, 13px description below.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Username</span><span class=\"ds-field-group\"><input class=\"ds-field-input\" type=\"text\"></span><span class=\"ds-field-desc\">Provide your username.</span></label>",
+      "css": ".ds-field { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; gap: 4px; width: 280px; } .ds-field-label { font-weight: 600; color: var(--color-fontcolor, #2a2e35); } .ds-field-group { display: block; border: 1px solid var(--color-input-edge, #d8d5ce); border-radius: 6px; background: var(--color-input-background, #ffffff); transition: border-color .15s ease-out, box-shadow .15s ease-out; } .ds-field-group:focus-within { border-color: var(--color-secondary, #4f46e5); box-shadow: 0 0 0 3px rgb(79 70 229 / .14); } .ds-field-input { width: 100%; border: 0; background: transparent; padding: 10px 12px; font: inherit; color: var(--color-typography, #1b1e23); caret-color: var(--color-secondary, #4f46e5); outline: none; } .ds-field-desc { font-size: 0.8125rem; line-height: 1.25rem; color: var(--color-fontcolor-soft, #5d626b); }"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "White sidebar: logo over a Sadu band; active item on the selection tint with deep-indigo text and a vertical woven mark on its leading edge.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-logo\">MyPosLab</div><a class=\"ds-nav-item\" href=\"#\">Dashboard</a><a class=\"ds-nav-item is-active\" href=\"#\" aria-current=\"page\">Orders</a><a class=\"ds-nav-item\" href=\"#\">Inventory</a></nav>",
+      "css": ".ds-nav { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; width: 240px; background: var(--color-aside-background, #ffffff); border-right: 1px solid var(--color-box-edge, #e6e3dd); padding-bottom: 8px; } .ds-nav-logo { position: relative; padding: 20px 16px 24px; margin-bottom: 8px; font-weight: 700; font-size: 1.25rem; color: var(--color-typography, #1b1e23); } .ds-nav-logo::after { content: \"\"; position: absolute; left: 16px; right: 16px; bottom: 0; height: 6px; border-radius: 1px; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%2323262d'/%3E%3Cpath d='M0 6 6 0 12 6Z' fill='%234f46e5'/%3E%3Cpath d='M12 0 18 6 24 0Z' fill='%23c9b48b'/%3E%3C/svg%3E\"); background-repeat: repeat-x; background-size: 24px 6px; } .ds-nav-item { position: relative; display: block; margin: 0 8px; padding: 8px 12px; border-radius: 6px; color: var(--color-fontcolor, #2a2e35); font-weight: 500; text-decoration: none; transition: background-color .15s ease-out, color .15s ease-out; } .ds-nav-item:hover { background: var(--color-aside-menu-background-hover, #f3f2ef); color: var(--color-typography, #1b1e23); } .ds-nav-item:focus-visible { outline: 2px solid var(--color-secondary, #4f46e5); outline-offset: 2px; } .ds-nav-item.is-active { background: #eef0ff; color: var(--color-tertiary, #4338ca); font-weight: 600; padding-inline-start: 18px; } .ds-nav-item.is-active::before { content: \"\"; position: absolute; inset-inline-start: 6px; top: 50%; width: 6px; height: 24px; transform: translateY(-50%); border-radius: 1px; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='24' viewBox='0 0 6 24'%3E%3Crect width='6' height='24' fill='%2323262d'/%3E%3Cpath d='M0 0 6 6 0 12Z' fill='%234f46e5'/%3E%3Cpath d='M6 12 0 18 6 24Z' fill='%23c9b48b'/%3E%3C/svg%3E\"); background-size: 6px 24px; }"
+    },
+    {
+      "name": "Status Stamp Badges",
+      "kind": "chip",
+      "refersTo": "status-badge",
+      "description": "Order and payment states as small stamps: tint ground, deep text; neutral stamp keeps a hairline.",
+      "html": "<div class=\"ds-stamps\"><span class=\"ds-stamp is-paid\">Paid</span><span class=\"ds-stamp is-attention\">Partially Paid</span><span class=\"ds-stamp is-void\">Void</span><span class=\"ds-stamp\">Not Available</span></div>",
+      "css": ".ds-stamps { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; display: flex; gap: 8px; flex-wrap: wrap; } .ds-stamp { display: inline-block; padding: 1px 8px; border-radius: 4px; border: 1px solid var(--color-input-edge, #d8d5ce); background: var(--color-surface-hard, #fbfaf8); color: var(--color-fontcolor, #2a2e35); font-size: 0.75rem; font-weight: 600; line-height: 1.25rem; } .ds-stamp.is-paid { background: var(--color-success-primary, #dcf5e6); border-color: transparent; color: var(--color-success-tertiary, #166534); } .ds-stamp.is-attention { background: var(--color-warning-primary, #fdf0cf); border-color: transparent; color: var(--color-warning-tertiary, #92400e); } .ds-stamp.is-void { background: var(--color-error-primary, #fde4e3); border-color: transparent; color: var(--color-error-tertiary, #b42320); }"
+    },
+    {
+      "name": "KPI Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Dashboard card: white panel, hairline edge, Panel shadow; the figure carries the weight, not a fill.",
+      "html": "<div class=\"ds-panel\"><div class=\"ds-panel-label\">Income</div><div class=\"ds-panel-figure\">AED173.2k</div><div class=\"ds-panel-foot\">+AED173,215.53 Today</div></div>",
+      "css": ".ds-panel { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; width: 300px; background: var(--color-box-background, #ffffff); border: 1px solid var(--color-box-edge, #e6e3dd); border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgb(35 38 45 / .05), 0 4px 12px -6px rgb(35 38 45 / .08); color: var(--color-fontcolor, #2a2e35); } .ds-panel-label { font-weight: 600; font-size: 1.125rem; } .ds-panel-figure { font-size: 1.5rem; line-height: 2rem; font-weight: 700; letter-spacing: -0.01em; color: var(--color-typography, #1b1e23); } .ds-panel-foot { margin-top: 24px; font-size: 0.8125rem; text-align: end; color: var(--color-fontcolor, #2a2e35); }"
+    },
+    {
+      "name": "POS Total and Action Bar",
+      "kind": "custom",
+      "refersTo": "pos-pay-button",
+      "description": "Signature: total row under a Sadu band with the largest figure on the till; one indigo Pay, quiet Hold / Discount / Void.",
+      "html": "<div class=\"ds-pos\"><div class=\"ds-pos-total\"><span>Total</span><span class=\"ds-pos-figure\">AED89.60</span></div><div class=\"ds-pos-actions\"><button class=\"ds-pos-pay\">Pay</button><button class=\"ds-pos-tool\">Hold</button><button class=\"ds-pos-tool\">Discount</button><button class=\"ds-pos-tool ds-pos-void\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6h18\"/><path d=\"M8 6V4h8v2\"/><path d=\"M19 6l-1 14H6L5 6\"/></svg>Void</button></div></div>",
+      "css": ".ds-pos { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; width: 560px; background: var(--color-box-background, #ffffff); border: 1px solid var(--color-box-edge, #e6e3dd); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgb(35 38 45 / .05), 0 6px 16px -8px rgb(35 38 45 / .10); } .ds-pos-total { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 12px 12px; font-weight: 700; color: var(--color-typography, #1b1e23); background-color: var(--color-box-background, #ffffff); background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%2323262d'/%3E%3Cpath d='M0 6 6 0 12 6Z' fill='%234f46e5'/%3E%3Cpath d='M12 0 18 6 24 0Z' fill='%23c9b48b'/%3E%3C/svg%3E\"); background-repeat: repeat-x; background-size: 24px 6px; background-position: left top; } .ds-pos-figure { font-size: 1.875rem; line-height: 2.25rem; letter-spacing: -0.02em; } .ds-pos-actions { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--color-box-edge, #e6e3dd); } .ds-pos-actions button { font: inherit; min-height: 64px; border: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: background-color .15s ease-out, color .15s ease-out; } .ds-pos-actions button:focus-visible { outline: 2px solid var(--color-secondary, #4f46e5); outline-offset: -4px; } .ds-pos-pay { background: var(--color-secondary, #4f46e5); color: #fff; font-size: 1.375rem; font-weight: 700; } .ds-pos-pay:hover, .ds-pos-pay:active { background: var(--color-tertiary, #4338ca); } .ds-pos-tool { background: var(--color-box-background, #ffffff); color: var(--color-fontcolor, #2a2e35); font-size: 1rem; font-weight: 500; box-shadow: inset 1px 0 0 var(--color-box-edge, #e6e3dd); } .ds-pos-tool:hover, .ds-pos-tool:active { background: var(--color-input-button-hover, #f3f2ef); } .ds-pos-void svg { color: var(--color-error-secondary, #d92d2a); } .ds-pos-void:hover { background: var(--color-error-primary, #fde4e3); color: var(--color-error-tertiary, #b42320); }"
+    },
+    {
+      "name": "Product Tile",
+      "kind": "card",
+      "refersTo": "product-tile",
+      "description": "POS grid tile on the 8px grid: photo above a solid name band; hover adds a 2px inset indigo ring.",
+      "html": "<button class=\"ds-tile\"><span class=\"ds-tile-photo\"></span><span class=\"ds-tile-name\">Noodle Board Stove Top Cover</span></button>",
+      "css": ".ds-tile { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; width: 130px; height: 144px; padding: 0; background: var(--color-box-background, #ffffff); border: 1px solid var(--color-box-edge, #e6e3dd); border-radius: 6px; overflow: hidden; cursor: pointer; text-align: center; transition: box-shadow .15s ease-out, border-color .15s ease-out; } .ds-tile-photo { flex: 1 1 0; min-height: 0; background: linear-gradient(135deg, var(--color-surface-soft, #ecebe6), var(--color-surface-hard, #fbfaf8)); } .ds-tile-name { min-height: 3rem; padding: 6px 8px; border-top: 1px solid var(--color-box-edge, #e6e3dd); font-size: 0.875rem; line-height: 1.25; font-weight: 500; color: var(--color-typography, #1b1e23); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .ds-tile:hover { border-color: var(--color-input-edge, #d8d5ce); box-shadow: inset 0 0 0 2px var(--color-secondary, #4f46e5); } .ds-tile:focus-visible { outline: 2px solid var(--color-secondary, #4f46e5); outline-offset: 2px; }"
+    },
+    {
+      "name": "Sadu Band",
+      "kind": "custom",
+      "refersTo": "sadu-band",
+      "description": "The only ornament: a 6px woven sawtooth selvage (24x6 repeat). Four placements only: sidebar logo, POS total row, sign-in card top, active menu mark.",
+      "html": "<div class=\"ds-sadu-card\"><div class=\"ds-sadu\"></div><div class=\"ds-sadu-body\">Sign-in card top edge</div></div>",
+      "css": ".ds-sadu-card { font-family: Jost, sans-serif; font-variant-numeric: tabular-nums; width: 320px; background: var(--color-box-background, #ffffff); border: 1px solid var(--color-box-edge, #e6e3dd); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgb(35 38 45 / .05), 0 4px 12px -6px rgb(35 38 45 / .08); } .ds-sadu { display: block; height: 6px; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%2323262d'/%3E%3Cpath d='M0 6 6 0 12 6Z' fill='%234f46e5'/%3E%3Cpath d='M12 0 18 6 24 0Z' fill='%23c9b48b'/%3E%3C/svg%3E\"); background-repeat: repeat-x; background-size: 24px 6px; } .ds-sadu-body { padding: 16px; color: var(--color-fontcolor-soft, #5d626b); font-size: 0.875rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Woven Counter",
+    "overview": "Sadu Light is a calm daylight tool for a shop counter. Its structure comes from the discipline of Emirati Al Sadu weaving: bands, a steady rhythm, and one patterned edge. It takes the place of the category's habits, the black sidebar and the candy-coloured buttons. The ground is warm white, never cream-yellow. Work happens on white panels with hairline warm-grey edges. Ink is charcoal. One indigo, taken from the logo, marks the single next action and the current selection, and nothing else is filled with colour.\n\nDensity is that of an operating tool: compact tables, 8px gaps in the product grid, and figures set in tabular numerals so money lines up. On the POS the cart, the total and Pay must be readable at a glance. The total is the largest figure on the screen and Pay is the only filled button. The back office reads as quiet white panels on the warm ground, and the active menu item is the only place where the band and indigo meet in the shell.\n\nThe only ornament is the Sadu band, a 6px woven sawtooth selvage of indigo and wool triangles over charcoal. It appears under the logo, across the top of the POS total row, along the top edge of the sign-in card, and as a short vertical mark on the active menu item. The owner has ruled out a dark interface: the default experience is light. The `dark` and `phosphor` themes still exist as alternate token sets but are not part of this world.",
+    "keyCharacteristics": [
+      "Warm-white ground (`surface`), white panels (`box-background`), hairline warm-grey edges (`box-edge`).",
+      "Charcoal ink in three steps; no pure black.",
+      "One accent: indigo `secondary` for the next action, selection, focus and caret.",
+      "State colours appear as small stamp badges and text, never as floods.",
+      "Tabular numerals on the whole body; money right-aligned and never wrapped.",
+      "One signature: the 6px Sadu band, used in four fixed places.",
+      "Jost as the single typeface; weight and size carry hierarchy."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Indigo fills only the single next action on a screen (Pay, Save, Sign In, Submit) and marks selection. Everything else is white with a hairline edge.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamp Rule",
+        "body": "State colours appear as small badges (tint ground, tertiary text) or as coloured text. A paid row is not tinted green, and a void row is not filled red.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cyan Stays Home Rule",
+        "body": "The cyan in the logo gradient appears only in the logo files (`public/svg/myposlab-*.svg`). It is not a UI colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ledger Figures Rule",
+        "body": "`font-variant-numeric: tabular-nums` is set on `body`. Money and quantity columns are right-aligned (`text-align: end`) and table cells do not wrap.",
+        "section": "typography"
+      },
+      {
+        "name": "The Largest Number Rule",
+        "body": "On the POS, TOTAL is the largest figure on the screen. No other figure or label may outsize it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Rule",
+        "body": "Panels are paper on a counter, not cards in the air. Use the three shadows above; never stack a box inside a box. Separate inner regions with a hairline instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** fill exactly one control per screen with indigo `secondary`: the next action. Selection states (active menu, selected switch, checked box, cart count) may use indigo too.",
+      "**Do** keep panels white (`box-background`) with a 1px `box-edge` hairline and the Panel shadow, on the warm-white `surface` ground.",
+      "**Do** show order and payment states as stamp badges: tint ground, tertiary text, 4px radius, 12px weight-600 text.",
+      "**Do** right-align money with `text-align: end`, keep it from wrapping, and rely on the body-wide tabular numerals.",
+      "**Do** make TOTAL the largest figure on the POS (1.875rem, 700, -0.02em).",
+      "**Do** use logical properties (`inset-inline-start`, `padding-inline-start`) so the shell mirrors in Arabic.",
+      "**Do** use only the existing semantic tokens (`bg-box-background`, `text-fontcolor-soft`, `border-input-edge`…) in modules, so every theme keeps working."
+    ],
+    "donts": [
+      "**Don't** build a dark or black sidebar, or any dark-ground default screen. The owner has ruled it out.",
+      "**Don't** fill rows, cards or whole buttons with green, amber or red to signal state. State is a badge or coloured text.",
+      "**Don't** use the logo's cyan, or a gradient fill, anywhere in the UI.",
+      "**Don't** add the Sadu band to new places or invent other ornaments. It has four placements.",
+      "**Don't** give the notification count, info badges or secondary buttons an indigo fill. Indigo is reserved.",
+      "**Don't** add a second typeface; Jost carries every role.",
+      "**Don't** add small uppercase kicker labels above headings. The upstream marketplace widget's kicker is hidden for this reason.",
+      "**Don't** nest a bordered box inside a bordered panel. Use a hairline rule or spacing."
+    ]
+  }
+}

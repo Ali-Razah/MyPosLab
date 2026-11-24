@@ -76,10 +76,10 @@
                             @apply border-pos-button-edge;
 
                             .remove-product {
-                                @apply border-error-primary;   
+                                @apply border-error-secondary;
 
                                 &:hover {
-                                    @apply text-error-primary;
+                                    @apply text-error-secondary;
                                 }
                             }
 
@@ -90,9 +90,9 @@
                             }
 
                             .wholesale-mode {
-                                @apply text-success-primary bg-transparent border-success-primary;
+                                @apply text-success-secondary bg-transparent border-success-secondary;
                                 &:hover {
-                                    @apply text-success-primary bg-transparent;
+                                    @apply text-success-secondary bg-transparent;
                                 }
                             }
 
@@ -325,7 +325,7 @@
     }
     div > div {
         > i {
-            @apply text-error-primary;
+            @apply text-error-secondary;
         }
         div > p {
             @apply text-fontcolor;

@@ -49,7 +49,7 @@ if ( Auth::check() ) {
                             @else
                             <a href="{{ ns()->route( 'ns.dashboard.home' ) }}" class="flex items-center gap-2" aria-label="MyPosLab">
                                 <img src="{{ asset( 'svg/myposlab-icon.svg' ) }}" class="w-9 h-9" alt=""/>
-                                <span class="text-2xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-indigo-300"><span class="font-black">MyPos</span><span class="font-normal">Lab</span></span>
+                                <span class="text-2xl tracking-tight"><span class="font-bold text-aside-color">MyPos</span><span class="font-normal text-secondary">Lab</span></span>
                             </a>
                             @endif
                         </div>

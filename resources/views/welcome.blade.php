@@ -5,7 +5,7 @@
         <div class="container flex-auto flex-col items-center justify-center flex m-4 sm:mx-auto">
             <div class="flex justify-center items-center py-6">
                 @if ( ! ns()->option->get( 'ns_store_square_logo', false ) )
-                <a href="https://my.nexopos.com" target="_blank">
+                <a href="{{ url( '/' ) }}">
                     <img class="w-32" src="{{ asset( 'svg/myposlab-logo-stacked.svg' ) }}" alt="MyPosLab">
                 </a>
                 @else

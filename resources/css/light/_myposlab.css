@@ -1,0 +1,830 @@
+/**
+ * MyPosLab "Sadu Light" — shell, components and the signature band.
+ *
+ * Loaded last by light.css so it refines the component files above without
+ * rewriting them. Rules of the world:
+ *   - indigo (secondary) is reserved for the next action and selection;
+ *   - state colours appear as small badges and text, never as floods;
+ *   - the Sadu band is the only ornament: logo base, POS total, sign-in card.
+ */
+
+/* ---------------------------------------------------------------- base */
+
+body {
+    @apply bg-surface text-fontcolor;
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+    caret-color: var( --color-secondary );
+}
+
+::selection {
+    background: #e0e3ff;
+    color: var( --color-typography );
+}
+
+:focus-visible {
+    outline: 2px solid var( --color-secondary );
+    outline-offset: 2px;
+}
+
+* {
+    scrollbar-color: var( --color-scroll-thumb ) transparent;
+    scrollbar-width: thin;
+}
+
+/* -------------------------------------------------------- the Sadu band */
+
+/**
+ * A woven sawtooth selvage: indigo and wool triangles over charcoal, the
+ * shajarah/uwairjan rhythm of Al Sadu weaving, drawn as a 24×6 repeat.
+ */
+.mpl-sadu,
+#dashboard-aside .logo::after,
+.mpl-auth-card::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%2323262d'/%3E%3Cpath d='M0 6 6 0 12 6Z' fill='%234f46e5'/%3E%3Cpath d='M12 0 18 6 24 0Z' fill='%23c9b48b'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 24px 6px;
+}
+
+.mpl-sadu {
+    display: block;
+    height: 6px;
+}
+
+/* ------------------------------------------------------------- sidebar */
+
+#dashboard-aside > div {
+    @apply bg-aside-background border-r border-box-edge;
+}
+
+#dashboard-aside .logo {
+    position: relative;
+    @apply pt-5 pb-6 mb-2;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 0;
+        height: 6px;
+        border-radius: 1px;
+    }
+}
+
+#dashboard-aside > div {
+    .ns-aside-menu {
+        @apply text-fontcolor font-medium rounded-md mx-2 border-0;
+        transition: background-color .15s ease-out, color .15s ease-out;
+
+        i {
+            @apply text-fontcolor-soft;
+        }
+
+        &.normal {
+            @apply bg-transparent;
+
+            &:hover {
+                @apply bg-aside-menu-background-hover text-typography;
+            }
+        }
+
+        &.toggled {
+            background: #eef0ff;
+            @apply text-tertiary font-semibold border-0;
+
+            i {
+                @apply text-secondary;
+            }
+        }
+
+        .notification-label {
+            @apply bg-error-secondary text-white;
+        }
+    }
+
+    .ns-aside-submenu {
+        @apply bg-transparent border-0 text-fontcolor-soft rounded-md mx-2;
+
+        &:hover {
+            @apply bg-aside-submenu-background-hover text-typography;
+        }
+
+        &.normal {
+            @apply text-fontcolor-soft;
+        }
+
+        &.active {
+            @apply text-tertiary font-semibold;
+        }
+    }
+}
+
+/* ---------------------------------------------------- header & content */
+
+#dashboard-body {
+    @apply bg-surface;
+
+    .page-inner-header {
+        h3 {
+            @apply text-typography font-semibold tracking-tight;
+        }
+    }
+}
+
+.ns-toggle-button,
+.ns-avatar,
+#notificaton-wrapper #notification-button {
+    @apply bg-box-background border-box-edge text-fontcolor;
+    box-shadow: 0 1px 2px rgb( 35 38 45 / .06 );
+
+    &:hover,
+    &.toggled,
+    &.panel-visible {
+        @apply bg-box-background border-input-edge text-typography;
+    }
+}
+
+#notificaton-wrapper .counter {
+    @apply bg-secondary text-white;
+}
+
+/* Boxes and panels: white on warm-white, hairline edge, one soft shadow */
+.ns-box,
+#crud-table,
+.ns-tab-item > div,
+#crud-form .ns-tab-item {
+    box-shadow: 0 1px 2px rgb( 35 38 45 / .05 ), 0 4px 12px -6px rgb( 35 38 45 / .08 );
+}
+
+/* --------------------------------------------------- dashboard KPI cards */
+
+/**
+ * Core widgets hard-code gradient fills with white text. In Sadu Light they
+ * become white panels; the number carries the weight, not the fill.
+ */
+.card-widget {
+    background-image: none !important;
+    @apply bg-box-background border border-box-edge text-fontcolor;
+    box-shadow: 0 1px 2px rgb( 35 38 45 / .05 ), 0 4px 12px -6px rgb( 35 38 45 / .08 );
+
+    h1, h2, h3, h4, h5, h6, span, p {
+        @apply text-fontcolor;
+    }
+
+    h2, h3 {
+        @apply text-typography;
+    }
+
+    i {
+        @apply text-fontcolor-soft;
+    }
+
+    .ns-inset-button, button {
+        @apply border-box-edge text-fontcolor-soft;
+
+        &:hover {
+            @apply bg-input-button-hover text-typography;
+        }
+    }
+}
+
+/* ------------------------------------------------------------- buttons */
+
+.ns-button {
+    button, a {
+        @apply bg-input-button border border-input-edge text-fontcolor;
+        box-shadow: 0 1px 2px rgb( 35 38 45 / .06 );
+        transition: background-color .15s ease-out, border-color .15s ease-out, color .15s ease-out;
+
+        &:hover {
+            @apply bg-input-button-hover border-input-edge;
+        }
+
+        &:disabled {
+            @apply bg-surface-soft text-input-disabled border-input-edge shadow-none;
+        }
+    }
+
+    /* the next action: indigo */
+    &.success, &.hover-success:hover,
+    &.primary, &.hover-primary:hover {
+        button, a {
+            @apply bg-secondary border-secondary text-white;
+
+            &:hover {
+                @apply bg-tertiary border-tertiary;
+            }
+
+            span.ns-label {
+                @apply bg-white text-secondary;
+            }
+        }
+    }
+
+    /* everything else is quiet: white, hairline, coloured text when meaningful */
+    &.default, &.hover-default:hover {
+        button, a {
+            @apply bg-input-button border-input-edge text-fontcolor;
+
+            span.ns-label {
+                @apply bg-surface-soft text-fontcolor;
+            }
+        }
+    }
+
+    &.info, &.hover-info:hover {
+        button, a {
+            @apply bg-input-button border-input-edge text-info-tertiary;
+
+            span.ns-label {
+                @apply bg-info-primary text-info-tertiary;
+            }
+        }
+    }
+
+    &.warning, &.hover-warning:hover {
+        button, a {
+            @apply bg-warning-primary border-warning-primary text-warning-tertiary;
+
+            span.ns-label {
+                @apply bg-white text-warning-tertiary;
+            }
+        }
+    }
+
+    &.error, &.hover-error:hover {
+        button, a {
+            @apply bg-error-secondary border-error-secondary text-white;
+
+            &:hover {
+                @apply bg-error-tertiary border-error-tertiary;
+            }
+
+            span.ns-label {
+                @apply bg-white text-error-secondary;
+            }
+        }
+    }
+}
+
+.ns-close-button {
+    @apply bg-box-background border-box-edge text-fontcolor-soft;
+
+    &:hover {
+        @apply bg-error-primary border-error-primary text-error-tertiary;
+
+        > i {
+            @apply text-error-tertiary;
+        }
+    }
+}
+
+/* ----------------------------------------------------- forms and inputs */
+
+.ns-input, .ns-select, .ns-textarea, .ns-date, .ns-media {
+    input, select, textarea {
+        @apply text-typography;
+    }
+
+    .input-group, > div {
+        transition: border-color .15s ease-out, box-shadow .15s ease-out;
+    }
+
+    .input-group:focus-within {
+        @apply border-secondary;
+        box-shadow: 0 0 0 3px rgb( 79 70 229 / .14 );
+    }
+}
+
+.ns-switch button.selected {
+    @apply bg-secondary text-white;
+}
+
+/* ---------------------------------------------------------------- tables */
+
+.ns-table thead th,
+#crud-table thead th {
+    @apply text-fontcolor-soft font-semibold text-xs uppercase tracking-wide;
+}
+
+#crud-table .ns-table-row:hover {
+    @apply bg-surface-hard;
+}
+
+/* money and dates never break across lines; the table scrolls instead */
+#crud-table td {
+    white-space: nowrap;
+}
+
+/* recent orders widget: paid is the normal state, so it is not coloured */
+#ns-orders-summary {
+    .paid-order, .other-order {
+        @apply bg-box-background text-fontcolor border-box-edge;
+    }
+
+    .paid-order, .other-order {
+        h3, h4, span, i {
+            @apply text-fontcolor;
+        }
+    }
+
+    .paid-currency {
+        @apply text-success-secondary;
+    }
+
+    .unpaid-currency {
+        @apply text-warning-secondary;
+    }
+}
+
+/* ------------------------------------------------------------------- POS */
+
+#pos-container {
+    @apply bg-surface text-fontcolor;
+
+    /* header: quiet tools; only Reset speaks in red */
+    .header-buttons .ns-button {
+        button, a {
+            @apply bg-box-background border-box-edge text-fontcolor font-medium;
+
+            i {
+                @apply text-fontcolor-soft;
+            }
+
+            &:hover {
+                @apply bg-input-button-hover text-typography;
+            }
+        }
+
+        &.error button, &.error a {
+            @apply text-error-secondary;
+
+            i {
+                @apply text-error-secondary;
+            }
+
+            &:hover {
+                @apply bg-error-primary border-error-primary text-error-tertiary;
+            }
+        }
+    }
+
+    #pos-cart .cart-table,
+    #pos-grid #grid-container {
+        @apply bg-box-background border border-box-edge rounded-lg overflow-hidden;
+        box-shadow: 0 1px 2px rgb( 35 38 45 / .05 ), 0 6px 16px -8px rgb( 35 38 45 / .10 );
+    }
+
+    #pos-cart #tools .switch-cart > span.products-count,
+    #pos-grid .switch-cart .products-count {
+        @apply bg-secondary text-white;
+    }
+
+    #pos-cart .cart-table {
+        #cart-table-header {
+            @apply bg-table-th text-fontcolor-soft text-xs uppercase tracking-wide font-semibold;
+        }
+
+        #cart-products-table .product-item {
+            transition: background-color .15s ease-out;
+
+            &:hover {
+                @apply bg-surface-hard;
+            }
+
+            h3 {
+                @apply text-typography font-semibold;
+            }
+        }
+
+        /* the total row: the Sadu band runs along its top edge */
+        #cart-products-summary {
+            table td {
+                @apply text-fontcolor;
+            }
+
+            tr.success {
+                @apply text-typography;
+                background-color: var( --color-box-background );
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='6' viewBox='0 0 24 6'%3E%3Crect width='24' height='6' fill='%2323262d'/%3E%3Cpath d='M0 6 6 0 12 6Z' fill='%234f46e5'/%3E%3Cpath d='M12 0 18 6 24 0Z' fill='%23c9b48b'/%3E%3C/svg%3E");
+                background-repeat: repeat-x;
+                background-size: 24px 6px;
+                background-position: left top;
+
+                td {
+                    @apply text-typography font-bold bg-transparent;
+                    padding-top: 16px;
+                    padding-bottom: 12px;
+                }
+
+                td:last-child {
+                    @apply text-xl;
+                    letter-spacing: -0.01em;
+                }
+
+                a {
+                    @apply border-secondary text-typography;
+
+                    &:hover {
+                        @apply text-secondary;
+                    }
+                }
+            }
+        }
+
+        /* one dominant action: Pay. Hold, Discount, Void stay quiet. */
+        #cart-bottom-buttons {
+            @apply border-t border-box-edge text-fontcolor bg-box-background;
+
+            #pay-button,
+            #hold-button,
+            #discount-button,
+            #void-button {
+                transition: background-color .15s ease-out, color .15s ease-out;
+            }
+
+            #pay-button {
+                @apply bg-secondary border-secondary text-white;
+
+                i, span {
+                    @apply text-white;
+                }
+
+                &:hover, &:active {
+                    @apply bg-tertiary;
+                }
+            }
+
+            #hold-button, #discount-button {
+                @apply bg-box-background border-box-edge text-fontcolor;
+
+                &:hover, &:active {
+                    @apply bg-input-button-hover;
+                }
+            }
+
+            #void-button {
+                @apply bg-box-background border-box-edge text-error-secondary;
+
+                &:hover, &:active {
+                    @apply bg-error-primary text-error-tertiary;
+                }
+            }
+        }
+    }
+
+    #pos-grid #grid-container {
+        #grid-items .cell-item,
+        #pinned-products .cell-item {
+            @apply bg-box-background;
+            transition: box-shadow .15s ease-out, border-color .15s ease-out;
+
+            .cell-item-label {
+                background: rgb( 255 255 255 / .92 );
+            }
+
+            h3 {
+                @apply text-typography font-medium;
+            }
+
+            &:hover {
+                @apply border-input-edge;
+                box-shadow: inset 0 0 0 2px var( --color-secondary );
+            }
+        }
+
+        #pinned-products {
+            @apply bg-surface-hard;
+        }
+    }
+}
+
+/* payment popup: the submit is the next action, nothing else is filled */
+#ns-payment-popup {
+    .ns-payment-buttons {
+        .ns-submit-button {
+            @apply bg-secondary text-white;
+
+            &:hover {
+                @apply bg-tertiary;
+            }
+        }
+
+        .ns-payment-type-button {
+            @apply bg-box-background text-fontcolor border border-box-edge;
+        }
+
+        .ns-layaway-button {
+            @apply bg-warning-primary text-warning-tertiary;
+        }
+
+        .ns-payment-button {
+            @apply bg-surface-soft text-fontcolor;
+
+            .ns-label {
+                @apply bg-secondary text-white;
+            }
+        }
+    }
+
+    ul li span.ns-label {
+        @apply bg-secondary text-white;
+    }
+}
+
+/* ---------------------------------------------------------- sign-in card */
+
+.mpl-auth-card {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+    }
+}
+
+/* ------------------------------------------------------- reduced motion */
+
+@media ( prefers-reduced-motion: reduce ) {
+    * {
+        transition-duration: 0s !important;
+    }
+}
+
+/* ===================================================== finish-review fixes */
+
+/* -- active menu item: a short woven mark on the leading edge (flips in RTL) */
+#dashboard-aside > div .ns-aside-menu {
+    position: relative;
+}
+
+#dashboard-aside > div .ns-aside-menu.toggled {
+    padding-inline-start: 18px;
+}
+
+#dashboard-aside > div .ns-aside-menu.toggled::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 6px;
+    top: 50%;
+    width: 6px;
+    height: 24px;
+    transform: translateY( -50% );
+    border-radius: 1px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='24' viewBox='0 0 6 24'%3E%3Crect width='6' height='24' fill='%2323262d'/%3E%3Cpath d='M0 0 6 6 0 12Z' fill='%234f46e5'/%3E%3Cpath d='M6 12 0 18 6 24Z' fill='%23c9b48b'/%3E%3C/svg%3E");
+    background-size: 6px 24px;
+    background-repeat: repeat-y;
+}
+
+/* -- indigo stays reserved: the notification count is charcoal */
+#notificaton-wrapper .counter,
+#dashboard-header .counter {
+    background-color: var( --color-sadu-ink ) !important;
+    color: #fff !important;
+}
+
+/* -- POS: TOTAL is the largest figure; Hold / Discount / Void are quiet tools */
+#pos-container #pos-cart .cart-table {
+    #cart-products-summary tr.success td:last-child {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.02em;
+    }
+
+    #cart-bottom-buttons {
+        #hold-button, #discount-button, #void-button {
+            font-weight: 500;
+            box-shadow: inset 1px 0 0 var( --color-box-edge );
+
+            span {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            i {
+                font-size: 1.25rem;
+            }
+        }
+
+        #void-button {
+            color: var( --color-fontcolor );
+
+            i {
+                color: var( --color-error-secondary );
+            }
+        }
+
+        #pay-button span {
+            font-size: 1.375rem;
+        }
+    }
+}
+
+/* -- POS grid: white tiles on an 8px rhythm, the name on a solid band under the photo */
+#pos-container #pos-grid #grid-container {
+    #grid-items > div.grid,
+    #pinned-products .grid {
+        gap: 8px;
+        padding: 8px;
+        border: 0;
+        box-shadow: none;
+    }
+
+    #grid-items .cell-item,
+    #pinned-products .cell-item {
+        @apply border border-box-edge rounded-md;
+        justify-content: flex-start;
+
+        /* the photo shrinks to leave room for the name band (core sets h-full) */
+        > div:first-child {
+            flex: 1 1 0;
+            min-height: 0;
+            height: auto !important;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        /* core floats the name over the photo; here it sits below it, in flow */
+        > div.absolute {
+            position: static !important;
+            flex: 0 0 auto;
+        }
+
+        .cell-item-label {
+            top: 0 !important;
+            height: auto !important;
+            min-height: 3rem;
+            background: var( --color-box-background ) !important;
+            border-top: 1px solid var( --color-box-edge );
+            padding: 6px 8px;
+
+            h3 {
+                @apply text-sm leading-tight;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+/* -- order type and similar choosers size to their content */
+#ns-order-type {
+    height: auto !important;
+
+    /* core declares two grid rows even when one row of types exists */
+    .ns-box-body {
+        grid-template-rows: auto !important;
+    }
+}
+
+/* -- first-run guide and notices sit above the footer credit line */
+#floating-notice-wrapper {
+    bottom: 28px !important;
+}
+
+/* -- orders and other lists: money right-aligned, statuses as stamp badges */
+#crud-table {
+    td[data-column="total"], th[data-column="total"],
+    td[data-column="tax_value"], th[data-column="tax_value"],
+    td[data-column="discount"], th[data-column="discount"],
+    td[data-column="purchases_amount"], th[data-column="purchases_amount"],
+    td[data-column="owed_amount"], th[data-column="owed_amount"],
+    td[data-column="account_amount"], th[data-column="account_amount"],
+    td[data-column="value"], th[data-column="value"],
+    td[data-column="amount"], th[data-column="amount"],
+    td[data-column="balance"], th[data-column="balance"] {
+        text-align: end;
+    }
+
+    td[data-column="payment_status"] > div,
+    td[data-column="delivery_status"] > div,
+    td[data-column="process_status"] > div,
+    td[data-column="status"] > div {
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 4px;
+        border: 1px solid var( --color-input-edge );
+        background: var( --color-surface-hard );
+        color: var( --color-fontcolor );
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+    }
+
+    tr.success td[data-column="payment_status"] > div {
+        background: var( --color-success-primary );
+        border-color: transparent;
+        color: var( --color-success-tertiary );
+    }
+
+    tr.warning td[data-column="payment_status"] > div,
+    tr.info td[data-column="payment_status"] > div {
+        background: var( --color-warning-primary );
+        border-color: transparent;
+        color: var( --color-warning-tertiary );
+    }
+
+    tr.error td[data-column="payment_status"] > div {
+        background: var( --color-error-primary );
+        border-color: transparent;
+        color: var( --color-error-tertiary );
+    }
+}
+
+/* -- KPI cards: one voice for figures; on phones, label above figure */
+.card-widget h3 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+@media ( max-width: 767px ) {
+    .card-widget {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+
+        > div {
+            flex-direction: column !important;
+            gap: 4px;
+
+            > div {
+                width: 100% !important;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                padding-inline: 0 !important;
+            }
+
+            > div:first-child {
+                flex-direction: column !important;
+            }
+
+            > div:first-child h6.hidden {
+                display: inline-block !important;
+                text-align: start;
+            }
+
+            > div:last-child h6 {
+                display: none !important;
+            }
+
+            > div:last-child h4 {
+                text-align: start !important;
+            }
+        }
+    }
+}
+
+/* -- upstream marketplace widget: no kicker label, no box inside the box */
+#ns-my-nexopos-widget {
+    div.mb-3:has( > span.uppercase ) {
+        display: none;
+    }
+
+    .rounded.border.bg-box-elevation-background {
+        border: 0 !important;
+        background: transparent !important;
+        padding: 0 !important;
+    }
+}
+
+/* -- small print stays readable */
+p.ns-description,
+.ns-description {
+    font-size: 0.8125rem !important;
+    line-height: 1.25rem;
+    color: var( --color-fontcolor-soft );
+}
+
+/* -- mobile KPI cards: the "Today" line sits right under the figure */
+@media ( max-width: 767px ) {
+    .card-widget {
+        height: auto !important;
+        min-height: 0 !important;
+        flex: none !important;
+        align-self: flex-start;
+        width: 100%;
+        justify-content: flex-start !important;
+
+        > div,
+        > div > div {
+            flex: 0 0 auto !important;
+        }
+    }
+}
+
+/* -- upstream widget: actions follow the list instead of sinking to the bottom */
+#ns-my-nexopos-widget .mt-auto {
+    margin-top: 0 !important;
+}

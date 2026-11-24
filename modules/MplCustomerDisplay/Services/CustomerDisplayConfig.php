@@ -45,9 +45,9 @@ class CustomerDisplayConfig
 
     public function theme(): string
     {
-        $theme = ns()->option->get( self::OPTION_THEME, 'dark' );
+        $theme = ns()->option->get( self::OPTION_THEME, 'light' );
 
-        return in_array( $theme, [ 'light', 'dark' ], true ) ? $theme : 'dark';
+        return in_array( $theme, [ 'light', 'dark' ], true ) ? $theme : 'light';
     }
 
     public function showTax(): bool

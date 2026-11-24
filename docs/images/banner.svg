@@ -2,22 +2,24 @@
   <title>MyPosLab — modern point of sale for UAE shops</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="400" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0B1220"/>
-      <stop offset="1" stop-color="#1E1B4B"/>
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F5F4F1"/>
     </linearGradient>
     <linearGradient id="mark" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#06B6D4"/><stop offset="1" stop-color="#4F46E5"/>
     </linearGradient>
     <linearGradient id="txt" x1="300" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#A5B4FC"/>
+      <stop offset="0" stop-color="#23262D"/><stop offset="1" stop-color="#23262D"/>
     </linearGradient>
     <radialGradient id="glow" cx="1050" cy="120" r="420" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#6366F1" stop-opacity=".35"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+      <stop offset="0" stop-color="#6366F1" stop-opacity=".10"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
     </radialGradient>
+  <pattern id="sadu" width="24" height="6" patternUnits="userSpaceOnUse"><rect width="24" height="6" fill="#23262d"/><path d="M0 6 6 0 12 6Z" fill="#4f46e5"/><path d="M12 0 18 6 24 0Z" fill="#c9b48b"/></pattern>
   </defs>
-  <rect width="1280" height="400" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="400" rx="24" fill="url(#bg)" stroke="#E6E3DD"/>
   <rect width="1280" height="400" rx="24" fill="url(#glow)"/>
-  <g opacity=".07" fill="#fff">
+  <rect x="80" y="372" width="1120" height="6" fill="url(#sadu)"/>
+  <g opacity=".06" fill="#23262D">
     <rect x="980" y="250" width="14" height="110" rx="3"/><rect x="1004" y="250" width="6" height="110" rx="2"/><rect x="1020" y="250" width="20" height="110" rx="3"/><rect x="1050" y="250" width="6" height="110" rx="2"/><rect x="1066" y="250" width="10" height="110" rx="2"/><rect x="1086" y="250" width="18" height="110" rx="3"/><rect x="1114" y="250" width="6" height="110" rx="2"/><rect x="1130" y="250" width="14" height="110" rx="3"/><rect x="1154" y="250" width="8" height="110" rx="2"/><rect x="1172" y="250" width="20" height="110" rx="3"/>
   </g>
   <svg x="80" y="96" width="208" height="208" viewBox="0 0 512 512">
@@ -27,15 +29,15 @@
     <g fill="#fff"><rect x="196" y="314" width="20" height="68" rx="4"/><rect x="226" y="314" width="10" height="68" rx="3"/><rect x="246" y="314" width="24" height="68" rx="4"/><rect x="280" y="314" width="10" height="68" rx="3"/><rect x="300" y="314" width="16" height="68" rx="3"/></g>
     <circle cx="244" cy="262" r="11" fill="#fff"/><circle cx="268" cy="236" r="7" fill="#fff" opacity=".85"/>
   </svg>
-  <text x="330" y="190" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="url(#txt)">MyPos<tspan font-weight="400">Lab</tspan></text>
-  <text x="334" y="240" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" fill="#CBD5E1">Modern point of sale for UAE shops</text>
-  <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#E0E7FF">
-    <rect x="334" y="276" width="186" height="38" rx="19" fill="#ffffff" fill-opacity=".08" stroke="#818CF8" stroke-opacity=".5"/><text x="427" y="301" text-anchor="middle">UAE E-Invoicing</text>
-    <rect x="532" y="276" width="190" height="38" rx="19" fill="#ffffff" fill-opacity=".08" stroke="#818CF8" stroke-opacity=".5"/><text x="627" y="301" text-anchor="middle">WhatsApp Receipts</text>
-    <rect x="734" y="276" width="176" height="38" rx="19" fill="#ffffff" fill-opacity=".08" stroke="#818CF8" stroke-opacity=".5"/><text x="822" y="301" text-anchor="middle">Batch &amp; Expiry</text>
-    <rect x="334" y="324" width="190" height="38" rx="19" fill="#ffffff" fill-opacity=".08" stroke="#818CF8" stroke-opacity=".5"/><text x="429" y="349" text-anchor="middle">Customer Display</text>
-    <rect x="536" y="324" width="150" height="38" rx="19" fill="#ffffff" fill-opacity=".08" stroke="#818CF8" stroke-opacity=".5"/><text x="611" y="349" text-anchor="middle">Owner App</text>
-    <rect x="698" y="324" width="212" height="38" rx="19" fill="#ffffff" fill-opacity=".08" stroke="#818CF8" stroke-opacity=".5"/><text x="804" y="349" text-anchor="middle">Multi-Branch</text>
+  <text x="330" y="190" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="url(#txt)">MyPos<tspan font-weight="400" fill="#4F46E5">Lab</tspan></text>
+  <text x="334" y="240" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" fill="#5D626B">Modern point of sale for UAE shops</text>
+  <g font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#2A2E35">
+    <rect x="334" y="276" width="186" height="38" rx="19" fill="#FFFFFF" stroke="#E6E3DD"/><text x="427" y="301" text-anchor="middle">UAE E-Invoicing</text>
+    <rect x="532" y="276" width="190" height="38" rx="19" fill="#FFFFFF" stroke="#E6E3DD"/><text x="627" y="301" text-anchor="middle">WhatsApp Receipts</text>
+    <rect x="734" y="276" width="176" height="38" rx="19" fill="#FFFFFF" stroke="#E6E3DD"/><text x="822" y="301" text-anchor="middle">Batch &amp; Expiry</text>
+    <rect x="334" y="324" width="190" height="38" rx="19" fill="#FFFFFF" stroke="#E6E3DD"/><text x="429" y="349" text-anchor="middle">Customer Display</text>
+    <rect x="536" y="324" width="150" height="38" rx="19" fill="#FFFFFF" stroke="#E6E3DD"/><text x="611" y="349" text-anchor="middle">Owner App</text>
+    <rect x="698" y="324" width="212" height="38" rx="19" fill="#FFFFFF" stroke="#E6E3DD"/><text x="804" y="349" text-anchor="middle">Multi-Branch</text>
   </g>
-  <text x="1200" y="378" text-anchor="end" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#64748B">English · العربية</text>
+  <text x="1200" y="356" text-anchor="end" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#5D626B">English · العربية</text>
 </svg>

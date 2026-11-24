@@ -42,10 +42,10 @@ class MplCustomerDisplaySettings extends SettingsPage
                         FormInput::select(
                             label: __m( 'Theme', 'MplCustomerDisplay' ),
                             name: CustomerDisplayConfig::OPTION_THEME,
-                            value: ns()->option->get( CustomerDisplayConfig::OPTION_THEME, 'dark' ),
+                            value: ns()->option->get( CustomerDisplayConfig::OPTION_THEME, 'light' ),
                             options: Helper::kvToJsOptions( [
-                                'dark' => __m( 'Dark (recommended for bright shops)', 'MplCustomerDisplay' ),
-                                'light' => __m( 'Light', 'MplCustomerDisplay' ),
+                                'light' => __m( 'Light (MyPosLab default)', 'MplCustomerDisplay' ),
+                                'dark' => __m( 'Dark', 'MplCustomerDisplay' ),
                             ] ),
                             validation: 'required|in:light,dark',
                             description: __m( 'Color scheme of the customer screen, independent from the cashier theme.', 'MplCustomerDisplay' ),

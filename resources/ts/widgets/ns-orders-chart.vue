@@ -24,7 +24,7 @@
         </div>
 
         <div v-else-if="errorMessage" class="flex flex-auto flex-col items-center justify-center gap-3 p-6 text-center">
-            <p class="text-sm text-error-primary">{{ errorMessage }}</p>
+            <p class="text-sm text-error-secondary">{{ errorMessage }}</p>
             <ns-button type="default" @click="loadReport">{{ __( 'Try Again' ) }}</ns-button>
         </div>
 

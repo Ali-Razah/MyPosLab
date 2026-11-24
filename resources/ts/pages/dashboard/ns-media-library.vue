@@ -467,7 +467,7 @@ export default {
                                         <div class="h-2 w-full overflow-hidden rounded bg-box-elevation">
                                             <div class="h-full bg-info-primary" :style="{ width: `${item.progress}%` }"></div>
                                         </div>
-                                        <button v-if="item.failed" @click="openUploadError( item )" class="text-xs text-error-primary">{{ __( 'See Error' ) }}</button>
+                                        <button v-if="item.failed" @click="openUploadError( item )" class="text-xs text-error-secondary">{{ __( 'See Error' ) }}</button>
                                         <span v-else class="text-xs text-soft-tertiary">{{ item.progress }}%</span>
                                     </div>
                                 </div>
@@ -535,7 +535,7 @@ export default {
 
                 <div v-if="isDragging" class="pointer-events-none absolute inset-3 z-10 flex items-center justify-center rounded border-2 border-dashed border-info-primary bg-box-background/80">
                     <div class="text-center">
-                        <i class="las la-cloud-upload-alt text-6xl text-info-primary"></i>
+                        <i class="las la-cloud-upload-alt text-6xl text-info-secondary"></i>
                         <h3 class="mt-2 text-xl font-bold">{{ __( 'Drop to upload' ) }}</h3>
                     </div>
                 </div>
