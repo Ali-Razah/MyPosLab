@@ -1,7 +1,7 @@
 <?php
 
 /**
- * NexoPOS Controller
+ * MyPosLab Controller
  *
  * @since  1.0
  **/

@@ -30,7 +30,7 @@ class CheckForUpdatesJob implements ShouldQueue
         try {
             $response = Http::withHeaders( [
                 'Accept' => 'application/vnd.github.v3+json',
-                'User-Agent' => 'NexoPOS',
+                'User-Agent' => 'MyPosLab',
             ] )->get( 'https://api.github.com/repos/blair2004/NexoPOS/releases/latest' );
 
             if ( $response->successful() ) {

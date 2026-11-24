@@ -12,9 +12,9 @@ class DashboardGuide
             'dashboard.guide',
             Guide::experience(
                 id: 'dashboard.guide',
-                title: __( 'Welcome to NexoPOS' ),
+                title: __( 'Welcome to MyPosLab' ),
                 description: __(
-                    'Take a quick tour of your dashboard and discover the main areas of NexoPOS.'
+                    'Take a quick tour of your dashboard and discover the main areas of MyPosLab.'
                 ),
                 permissions: ['manage.options'],
                 required_routes: ['ns.dashboard.home'],
@@ -27,7 +27,7 @@ class DashboardGuide
                             title: __( 'Your Menu' ),
 
                             description: __(
-                                'Use this side menu to access various areas within NexoPOS including settings, inventory, orders, customers and users.'
+                                'Use this side menu to access various areas within MyPosLab including settings, inventory, orders, customers and users.'
                             ),
 
                             side: 'bottom',
@@ -110,7 +110,7 @@ class DashboardGuide
                             title: __( 'Orders' ),
 
                             description: __(
-                                'Every sale created with NexoPOS is recorded as an order. You can review previous transactions from here.'
+                                'Every sale created with MyPosLab is recorded as an order. You can review previous transactions from here.'
                             ),
 
                             side: 'right',

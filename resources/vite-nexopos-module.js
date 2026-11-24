@@ -7,10 +7,10 @@ import path from "node:path";
 import { nexoposVueRuntime } from "./vite-plugin-nexopos-vue.js";
 
 /**
- * Shared Vite config factory for NexoPOS modules.
+ * Shared Vite config factory for MyPosLab modules.
  *
  * Ensures module builds:
- * - rewrite `vue` imports to the shared NexoPOS runtime
+ * - rewrite `vue` imports to the shared MyPosLab runtime
  * - compile `.vue` SFCs
  * - emit assets under Public/build with a Laravel Vite manifest
  *
