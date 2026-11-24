@@ -15,6 +15,9 @@ modules/*
 !modules/.temp
 modules/.temp/*
 !modules/index.html
+!modules/Mpl*/
+modules/Mpl*/Tests/*.sqlite
+modules/Mpl*/node_modules/
 public/modules/*
 public/storage
 public/export/*

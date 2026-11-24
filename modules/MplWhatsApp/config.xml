@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>MplWhatsApp</namespace>
+    <version>1.0</version>
+    <author>MyPosLab</author>
+    <name>MyPosLab WhatsApp Receipts</name>
+    <description>
+        <locale lang="en">Send order receipts to customers on WhatsApp instead of printing</locale>
+    </description>
+</module>

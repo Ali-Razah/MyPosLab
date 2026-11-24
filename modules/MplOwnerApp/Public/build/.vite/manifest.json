@@ -1,0 +1,17 @@
+{
+  "Resources/css/style.css": {
+    "file": "assets/style-O90-oxaf.css",
+    "src": "Resources/css/style.css",
+    "isEntry": true,
+    "name": "style",
+    "names": [
+      "style.css"
+    ]
+  },
+  "Resources/ts/owner.ts": {
+    "file": "assets/owner-CZR8FE7t.js",
+    "name": "owner",
+    "src": "Resources/ts/owner.ts",
+    "isEntry": true
+  }
+}

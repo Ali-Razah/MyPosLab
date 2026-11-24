@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>MplEInvoice</namespace>
+    <version>1.0</version>
+    <author>MyPosLab</author>
+    <name>MyPosLab E-Invoicing (UAE)</name>
+    <description>
+        <locale lang="en">UAE tax invoices with TRN and PINT-AE (Peppol) e-invoice XML ready for an Accredited Service Provider</locale>
+    </description>
+</module>

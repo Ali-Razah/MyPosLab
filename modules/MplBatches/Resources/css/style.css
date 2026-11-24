@@ -1,0 +1,17 @@
+@import "tailwindcss" prefix(mplb);
+
+/* Limit scanning to this module. */
+@source "../ts/**/*.{vue,ts}";
+@source "../Views/**/*.blade.php";
+
+/* Bridge NexoPOS semantic theme tokens so prefixed utilities follow light/dark/phosphor. */
+@theme {
+    --color-box-background: var(--color-box-background);
+    --color-box-edge: var(--color-box-edge);
+    --color-fontcolor: var(--color-fontcolor);
+    --color-fontcolor-soft: var(--color-fontcolor-soft);
+    --color-info-primary: var(--color-info-primary);
+    --color-warning-primary: var(--color-warning-primary);
+    --color-error-primary: var(--color-error-primary);
+    --color-success-primary: var(--color-success-primary);
+}

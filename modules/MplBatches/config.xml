@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<module>
+    <namespace>MplBatches</namespace>
+    <version>1.0</version>
+    <author>MyPosLab</author>
+    <name>MyPosLab Batches &amp; Expiry</name>
+    <description>
+        <locale lang="en">Batch numbers and expiry dates per stock receipt with expiry alerts</locale>
+    </description>
+</module>

@@ -1,0 +1,33 @@
+{
+  "Resources/css/style.css": {
+    "file": "assets/style-DPG9EbaV.css",
+    "src": "Resources/css/style.css",
+    "isEntry": true,
+    "name": "style",
+    "names": [
+      "style.css"
+    ]
+  },
+  "Resources/ts/orders.ts": {
+    "file": "assets/orders-BB3NUxVv.js",
+    "name": "orders",
+    "src": "Resources/ts/orders.ts",
+    "isEntry": true,
+    "imports": [
+      "_SendReceiptPopup-Cat_Ljx1.js"
+    ]
+  },
+  "Resources/ts/pos.ts": {
+    "file": "assets/pos-6sT8ILbV.js",
+    "name": "pos",
+    "src": "Resources/ts/pos.ts",
+    "isEntry": true,
+    "imports": [
+      "_SendReceiptPopup-Cat_Ljx1.js"
+    ]
+  },
+  "_SendReceiptPopup-Cat_Ljx1.js": {
+    "file": "assets/SendReceiptPopup-Cat_Ljx1.js",
+    "name": "SendReceiptPopup"
+  }
+}

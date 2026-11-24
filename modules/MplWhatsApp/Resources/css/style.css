@@ -1,0 +1,22 @@
+/*
+ * Theme + utilities only: the host page already ships Tailwind preflight,
+ * re-emitting it from a module would reset core POS/dashboard base styles.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(mwa);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(mwa);
+
+@source "../ts/**/*.ts";
+@source "../Views/**/*.blade.php";
+
+/*
+ * Bridge the NexoPOS theme tokens (light / dark / phosphor) used by the module markup.
+ */
+@theme {
+    --color-box-background: var(--color-box-background);
+    --color-box-edge: var(--color-box-edge);
+    --color-fontcolor: var(--color-fontcolor);
+    --color-fontcolor-soft: var(--color-fontcolor-soft);
+    --color-success-tertiary: var(--color-success-tertiary);
+    --color-error-tertiary: var(--color-error-tertiary);
+}
