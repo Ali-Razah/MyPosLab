@@ -73,3 +73,12 @@ playwright/.auth/
 
 # design review captures (local evidence)
 .impeccable/review/
+
+# Local AI and editor tooling (kept on this machine only)
+/.codex/
+/.claude/
+/.agents/
+/.impeccable/
+/AGENTS.md
+/CLAUDE.md
+/boost.json
