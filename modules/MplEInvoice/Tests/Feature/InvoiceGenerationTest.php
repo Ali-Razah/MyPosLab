@@ -104,9 +104,18 @@ class InvoiceGenerationTest extends EInvoiceTestCase
         $this->assertSame( '157.50', $total );
         $this->assertSame( $total, $this->value( $xpath, '/inv:Invoice/cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount' ) );
         $this->assertSame( $total, $this->value( $xpath, '/inv:Invoice/cac:LegalMonetaryTotal/cbc:PayableAmount' ) );
-        $this->assertSame( number_format( $order->tax_value, 2, '.', '' ), $this->value( $xpath, '/inv:Invoice/cac:TaxTotal/cbc:TaxAmount' ) );
+        $this->assertSame( '7.50', $this->value( $xpath, '/inv:Invoice/cac:TaxTotal/cbc:TaxAmount' ) );
         $this->assertSame( '150.00', $this->value( $xpath, '/inv:Invoice/cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount' ) );
         $this->assertSame( '150.00', $this->value( $xpath, '/inv:Invoice/cac:LegalMonetaryTotal/cbc:LineExtensionAmount' ) );
+
+        /**
+         * Net amount plus VAT must equal what the customer paid, whatever VAT mode the store uses.
+         */
+        $this->assertEqualsWithDelta(
+            (float) $this->value( $xpath, '/inv:Invoice/cac:LegalMonetaryTotal/cbc:PayableAmount' ),
+            (float) $this->value( $xpath, '/inv:Invoice/cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount' ) + (float) $this->value( $xpath, '/inv:Invoice/cac:TaxTotal/cbc:TaxAmount' ),
+            0.001
+        );
 
         $this->assertSame( 'S', $this->value( $xpath, '/inv:Invoice/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:ID' ) );
         $this->assertSame( '5.00', $this->value( $xpath, '/inv:Invoice/cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:Percent' ) );

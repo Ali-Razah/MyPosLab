@@ -360,7 +360,8 @@ class MenuService
                     AsideMenu::subMenu(
                         label: __( 'Marketplace' ),
                         identifier: 'marketplace',
-                        href: ns()->url( '/dashboard/modules/marketplace' )
+                        href: ns()->url( '/dashboard/modules/marketplace' ),
+                        show: config( 'nexopos.marketplace' ),
                     ),
                 ),
             ),
@@ -592,7 +593,7 @@ class MenuService
             return ( ! isset( $menu[ 'permissions' ] ) || Gate::any( $menu[ 'permissions' ] ) ) && ( ! isset( $menu[ 'show' ] ) || $menu[ 'show' ] === true );
         } )->map( function ( $menu ) {
             $menu[ 'childrens' ] = collect( $menu[ 'childrens' ] ?? [] )->filter( function ( $submenu ) {
-                return ! isset( $submenu[ 'permissions' ] ) || Gate::any( $submenu[ 'permissions' ] );
+                return ( ! isset( $submenu[ 'permissions' ] ) || Gate::any( $submenu[ 'permissions' ] ) ) && ( ! isset( $submenu[ 'show' ] ) || $submenu[ 'show' ] === true );
             } )->toArray();
 
             return $menu;

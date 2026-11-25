@@ -22,6 +22,10 @@ final class DefaultThemeTest extends TestCase
     {
         ns()->option->set( CustomerDisplayConfig::OPTION_THEME, 'neon' );
 
-        $this->assertSame( 'light', app( CustomerDisplayConfig::class )->theme() );
+        try {
+            $this->assertSame( 'light', app( CustomerDisplayConfig::class )->theme() );
+        } finally {
+            ns()->option->delete( CustomerDisplayConfig::OPTION_THEME );
+        }
     }
 }

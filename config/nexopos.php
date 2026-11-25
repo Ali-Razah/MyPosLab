@@ -34,6 +34,17 @@ return [
 
     /**
      * --------------------------------------------------------------------
+     *  Upstream module marketplace
+     * --------------------------------------------------------------------
+     *
+     * Shows the "Marketplace" menu, the marketplace account widget and the
+     * marketplace links of the upstream NexoPOS service. MyPosLab hides them
+     * unless NS_MARKETPLACE=true. Uploading modules works either way.
+     */
+    'marketplace' => (bool) env( 'NS_MARKETPLACE', false ),
+
+    /**
+     * --------------------------------------------------------------------
      *  Supported Languages
      * --------------------------------------------------------------------
      *

@@ -39,7 +39,7 @@
 
                     <div class="relative grid w-full gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
                         <div class="max-w-2xl">
-                            <span class="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                            <span v-if="marketplace" class="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
                                 <i class="las la-store-alt text-sm"></i>
                                 {{ __( 'Marketplace' ) }}
                             </span>
@@ -48,12 +48,12 @@
                                 {{ __( 'Start with a powerful module ecosystem.' ) }}
                             </h2>
 
-                            <p class="mt-3 max-w-xl text-sm leading-6 text-fontcolor-soft">
+                            <p v-if="marketplace" class="mt-3 max-w-xl text-sm leading-6 text-fontcolor-soft">
                                 {{ __( 'Browse the marketplace to discover extensions, install what you need in a few clicks, and grow your dashboard with polished add-ons built for your workflow.' ) }}
                             </p>
 
                             <div class="mt-6 flex flex-wrap gap-3">
-                                <ns-button href="/dashboard/modules/marketplace">
+                                <ns-button v-if="marketplace" href="/dashboard/modules/marketplace">
                                     <span class="flex items-center gap-2">
                                         <i class="las la-shopping-bag"></i>
                                         {{ __( 'Explore modules' ) }}
@@ -78,9 +78,9 @@
                         </div>
                         <h2 class="text-2xl font-semibold text-fontcolor">{{ __( 'No modules match your search.' ) }}</h2>
                         <p class="mt-2 text-sm text-fontcolor-soft">
-                            {{ __( 'Try a different keyword or browse the marketplace for new extensions.' ) }}
+                            {{ marketplace ? __( 'Try a different keyword or browse the marketplace for new extensions.' ) : __( 'Try a different keyword.' ) }}
                         </p>
-                        <div class="mt-5 flex justify-center">
+                        <div v-if="marketplace" class="mt-5 flex justify-center">
                             <ns-button href="/dashboard/modules/marketplace">
                                 <span class="flex items-center gap-2">
                                     <i class="las la-store-alt"></i>
@@ -146,7 +146,11 @@ import { nsAlertPopup } from '~/components/components';
 
 export default {
     name: 'ns-modules',
-    props: [ 'url', 'upload' ],
+    props: {
+        url: String,
+        upload: String,
+        marketplace: { type: Boolean, default: false },
+    },
     data() {
         return {
             rawModules: [],
