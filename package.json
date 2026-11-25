@@ -34,6 +34,8 @@
     "vite-plugin-mkcert": "^1.17.9"
   },
   "name": "myposlab",
+  "author": "Ali Razah",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@ckeditor/ckeditor5-vue": "^5.1.0",
     "@dicebear/avataaars": "^9.3.1",

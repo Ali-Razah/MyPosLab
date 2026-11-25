@@ -52,6 +52,14 @@ abstract class EInvoiceTestCase extends TestCase
              */
             $this->refreshApplication();
             $modules = app()->make( ModulesService::class );
+            $modules->runAllMigration( self::MODULE );
+
+            /**
+             * Permissions are registered as gates when the application boots,
+             * so boot again to pick up the ones the migrations just created.
+             */
+            $this->refreshApplication();
+            $modules = app()->make( ModulesService::class );
         }
 
         $modules->runAllMigration( self::MODULE );

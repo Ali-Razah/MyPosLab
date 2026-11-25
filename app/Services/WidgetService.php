@@ -28,15 +28,15 @@ class WidgetService
      * @var array<int, class-string<WidgetService>>
      */
     protected const DEFAULT_WIDGET_ORDER = [
-        IncompleteSaleCardWidget::class,
-        ExpenseCardWidget::class,
-        SaleCardWidget::class,
-        MyNexoPosWidget::class,
         OrdersChartWidget::class,
         BestCustomersWidget::class,
         OrdersSummaryWidget::class,
         BestCashiersWidget::class,
         ProfileWidget::class,
+        MyNexoPosWidget::class,
+        IncompleteSaleCardWidget::class,
+        ExpenseCardWidget::class,
+        SaleCardWidget::class,
     ];
 
     /**
@@ -96,7 +96,7 @@ class WidgetService
             IncompleteSaleCardWidget::class,
             ExpenseCardWidget::class,
             SaleCardWidget::class,
-            MyNexoPosWidget::class,
+            ...( config( 'nexopos.marketplace' ) ? [ MyNexoPosWidget::class ] : [] ),
             BestCustomersWidget::class,
             ProfileWidget::class,
             OrdersChartWidget::class,

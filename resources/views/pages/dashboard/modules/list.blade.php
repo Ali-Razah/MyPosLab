@@ -8,6 +8,7 @@
         <div class="flex-auto flex h-full w-full">
             <ns-modules 
                 upload="{{ url( 'dashboard/modules/upload' ) }}"
+                :marketplace="{{ config( 'nexopos.marketplace' ) ? 'true' : 'false' }}"
                 url="{{ url( 'api/modules' ) }}"></ns-modules>
         </div>
     </div>

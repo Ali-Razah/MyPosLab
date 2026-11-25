@@ -421,6 +421,7 @@ class OwnerAppTest extends TestCase
 
         $product->tax_type = 'disabled';
         $product->tax_group_id = null;
+        $product->auto_cogs = false;
         $product->save();
 
         $unitQuantity = $product->unit_quantities()->firstOrFail();

@@ -373,7 +373,7 @@
     ]
   },
   "resources/ts/app-init.ts": {
-    "file": "assets/app-init-CsWjou07.js",
+    "file": "assets/app-init-tnCan0zu.js",
     "name": "app-init",
     "src": "resources/ts/app-init.ts",
     "isEntry": true,
@@ -615,7 +615,7 @@
     ]
   },
   "resources/ts/pages/dashboard/modules.vue": {
-    "file": "assets/modules-D81v1r7a.js",
+    "file": "assets/modules-DWzXAxNM.js",
     "name": "modules",
     "src": "resources/ts/pages/dashboard/modules.vue",
     "isDynamicEntry": true,

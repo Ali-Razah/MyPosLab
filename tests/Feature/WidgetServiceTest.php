@@ -23,6 +23,8 @@ class WidgetServiceTest extends TestCase
 {
     public function test_fresh_user_receives_the_packed_default_order_with_suggested_layouts(): void
     {
+        config( [ 'nexopos.marketplace' => true ] );
+
         $user = new User;
         $user->id = 42;
         $userGate = Mockery::mock( GateContract::class );
@@ -52,6 +54,40 @@ class WidgetServiceTest extends TestCase
             ->andReturn( [ 'status' => 'success' ] );
 
         ( new WidgetService( $usersService ) )->addDefaultWidgetsToAreas( $user );
+    }
+
+    public function test_marketplace_widget_is_not_registered_by_default(): void
+    {
+        $this->assertFalse( config( 'nexopos.marketplace' ) );
+
+        $widgetClasses = ( new WidgetService( app( UsersService::class ) ) )->getAllWidgets()->pluck( 'class-name' )->all();
+
+        $this->assertNotContains( MyNexoPosWidget::class, $widgetClasses );
+        $this->assertContains( OrdersChartWidget::class, $widgetClasses );
+    }
+
+    public function test_default_widgets_without_marketplace_fill_complete_grid_rows(): void
+    {
+        $widget = new class( app( UsersService::class ) ) extends WidgetService
+        {
+            public function orderWidgets( array $widgetClasses ): array
+            {
+                return $this->orderDefaultWidgetClasses( collect( $widgetClasses ) )->all();
+            }
+        };
+
+        $orderedWidgets = $widget->orderWidgets( [
+            IncompleteSaleCardWidget::class,
+            ExpenseCardWidget::class,
+            SaleCardWidget::class,
+            BestCustomersWidget::class,
+            ProfileWidget::class,
+            OrdersChartWidget::class,
+            OrdersSummaryWidget::class,
+            BestCashiersWidget::class,
+        ] );
+
+        $this->assertSame( range( 0, 17 ), $this->occupiedGridCells( $orderedWidgets ) );
     }
 
     public function test_default_widgets_are_ordered_to_fill_complete_grid_rows(): void
@@ -92,7 +128,7 @@ class WidgetServiceTest extends TestCase
         ], $orderedWidgets );
 
         $this->assertSame(
-            range( 0, 16 ),
+            range( 0, 20 ),
             $this->occupiedGridCells( array_slice( $orderedWidgets, 0, 9 ) )
         );
     }
@@ -189,9 +225,11 @@ class WidgetServiceTest extends TestCase
         $this->assertTrue( $widget->supportsLayout( '3x5' ) );
     }
 
-    public function test_my_nexopos_widget_is_registered(): void
+    public function test_my_nexopos_widget_is_registered_when_marketplace_is_enabled(): void
     {
-        $widgets = app( WidgetService::class )->getAllWidgets();
+        config( [ 'nexopos.marketplace' => true ] );
+
+        $widgets = ( new WidgetService( app( UsersService::class ) ) )->getAllWidgets();
 
         $widget = $widgets->firstWhere( 'class-name', MyNexoPosWidget::class );
 

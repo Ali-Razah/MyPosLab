@@ -4,6 +4,7 @@ namespace Modules\MplBranches\Tests\Feature;
 
 use App\Crud\OrderCrud;
 use App\Models\Order;
+use App\Models\Register;
 use App\Models\Role;
 use Modules\MplBranches\Models\BranchOrder;
 use Modules\MplBranches\Models\BranchUser;
@@ -62,6 +63,13 @@ final class OrderTaggingTest extends MplBranchesTestCase
         $branch = $this->createBranch();
         $register = $this->createRegister();
         $this->branchService()->syncBranchRegisters( $branch, [ $register->id ] );
+
+        /**
+         * A payment can only be recorded on an open register.
+         */
+        $register->status = Register::STATUS_OPENED;
+        $register->used_by = $this->admin()->id;
+        $register->save();
 
         $order = $this->createPaidOrder( [
             'payments' => [ [ 'identifier' => 'cash-payment', 'value' => 0.01 ] ],

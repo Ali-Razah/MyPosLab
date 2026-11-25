@@ -196,6 +196,10 @@ class ModulesController extends DashboardController
 
     public function showMarketplace( Request $request )
     {
+        if ( ! config( 'nexopos.marketplace' ) ) {
+            return redirect()->route( 'ns.dashboard.modules-list' );
+        }
+
         $this->marketplaceService->testConnection();
 
         $accessToken = ns()->option->get( 'mynexopos_access_token' );

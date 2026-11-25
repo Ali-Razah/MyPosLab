@@ -94,7 +94,8 @@ class TestOtherGetRoutes extends TestCase
                         $this->assertTrue( in_array( $uri, [
                             'dashboard/accounting/transactions/create',
                             'dashboard/oauth/mynexopos/authorize',
-                        ] ) );
+                            'dashboard/modules/marketplace',
+                        ] ), sprintf( 'Unexpected redirect from %s', $uri ) );
                     } else {
                         if ( $response->status() == 200 ) {
                             if ( $uri === 'dashboard/pos' ) {

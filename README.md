@@ -31,6 +31,7 @@ It suits supermarkets and groceries, pharmacies, mobile and electronics stores, 
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
+- [Troubleshooting](#troubleshooting)
 - [Running the tests](#running-the-tests)
 - [Project layout](#project-layout)
 - [License](#license)
@@ -210,6 +211,19 @@ Most settings are in the dashboard (**Settings**, and each module's own settings
 | `SANCTUM_STATEFUL_DOMAINS` | — | Domain(s) the dashboard is opened on |
 | `NS_TELEMETRY` | `false` | When `true`, reports host name, version and enabled modules once a day to an external vendor server. Off by default. |
 | `NS_UPSTREAM_ADS` | `false` | When `true`, shows third-party promotional banners on the dashboard. Off by default. |
+| `NS_MARKETPLACE` | `false` | When `true`, shows the third-party module marketplace. Uploading your own modules works either way. |
+
+---
+
+## Troubleshooting
+
+**"Unable to connect to the database"** — check `DB_CONNECTION`, `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` in `.env`, make sure the database exists and the user can reach it, then run `php artisan config:clear`.
+
+**The dashboard says data "could not be loaded"** — set `SANCTUM_STATEFUL_DOMAINS` and `SESSION_DOMAIN` in `.env` to the exact domain (and port) you open MyPosLab on, then run `php artisan config:clear` and sign in again.
+
+**Blank page or "Unable to locate file in Vite manifest"** — the compiled files in `public/build` are missing. Pull them again from the repository, or run `npm install && npm run build`.
+
+**Reports, expiry alerts or WhatsApp messages never arrive** — the scheduler and queue worker are not running. See steps 5 and 6 of [Installation](#installation).
 
 ---
 
@@ -243,4 +257,6 @@ docs/images          README images
 
 ## License
 
-MyPosLab is free software licensed under the [GNU GPL v3.0](LICENSE).
+Copyright © 2026 Ali Razah.
+
+MyPosLab is free and open-source software under the [GNU GPL v3.0](LICENSE). Anyone can download, use, change and share it free of charge, including for commercial use in their own shop. If you share a modified version, it must stay open source under the same license.
